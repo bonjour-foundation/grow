@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="light"></ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-slides #introSlider pager="false" [options]="sliderOptions" (ionSlideWillChange)="transition = true" (ionSlideDidChange)="updateAnimateLastSlide()">
+    <ion-slide class="ion-padding grow">
+      <main>
+        <img loading="lazy" class="grow-logo" src="./assets/img/logo/grow.svg" role="presentation" />
+
+        <h1>Grow</h1>
+
+        <p class="ion-text-center">{{ 'INTRO.SLIDE_1.SUB_TITLE' | translate }}</p>
+
+        <img loading="lazy" class="bonjour-logo" src="./assets/img/logo/by_bonjour.svg" role="presentation" />
+      </main>
+
+      <div class="bottom">
+        <ion-button (click)="next()" mode="ios" shape="round" expand="block" color="category" [disabled]="transition">
+          <ion-label>{{ 'INTRO.SLIDE_1.BUTTON' | translate }}</ion-label>
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="ion-padding">
+      <main>
+        <h1 class="ion-text-center">{{ 'INTRO.SLIDE_2.TITLE' | translate }}</h1>
+        <p class="ion-text-center">{{ 'INTRO.SLIDE_2.SUB_TITLE_1' | translate }}</p>
+        <p class="ion-text-center">{{ 'INTRO.SLIDE_2.SUB_TITLE_2' | translate }}</p>
+      </main>
+
+      <img loading="lazy" class="grow" src="./assets/img/flower/grow_1.svg" role="presentation" />
+
+      <div class="bottom">
+        <ion-button (click)="next()" mode="ios" shape="round" expand="block" color="category" [disabled]="transition">
+          <ion-label>{{ 'INTRO.SLIDE_2.BUTTON' | translate }}</ion-label>
+        </ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="ion-padding animated">
+      <main>
+        <h1 class="ion-text-center">{{ 'INTRO.SLIDE_3.TITLE' | translate }}</h1>
+        <p class="ion-text-center">{{ 'INTRO.SLIDE_3.SUB_TITLE_1' | translate }}</p>
+        <p class="ion-text-center">{{ 'INTRO.SLIDE_3.SUB_TITLE_2' | translate }}</p>
+      </main>
+
+      <img loading="lazy" class="grow" src="./assets/img/flower/grow_1.svg" role="presentation" [class.display]="!grow" />
+      <img loading="lazy" class="grow" src="./assets/img/flower/grow_2.svg" role="presentation" [class.display]="grow" />
+
+      <img loading="lazy" class="water" src="./assets/img/flower/watering-can.svg" role="presentation" [class.display]="water" />
+
+      <div class="bottom">
+        <ion-button (click)="next()" mode="ios" shape="round" expand="block" color="category" [disabled]="transition">
+          <ion-label>{{ 'INTRO.SLIDE_3.BUTTON' | translate }}</ion-label>
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

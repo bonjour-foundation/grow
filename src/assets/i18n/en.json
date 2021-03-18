@@ -1,0 +1,308 @@
+{
+  "CORE": {
+    "NEXT": "Next",
+    "BACK": "Back"
+  },
+  "MSG": {
+    "AT_LEAST_A_GOAL": "Please choose at least one weekly goal."
+  },
+  "ERROR": {
+    "GOAL_NOT_ADDED": "Unable to add weekly goal.",
+    "GOAL_NOT_LOADED": "Unable to load weekly goal.",
+    "GROW_NOT_LOADED": "Unable to load progress."
+  },
+  "NOTIFICATION": {
+    "TITLE": "Your weekly goal",
+    "BODY": "Have you achieved your goal for the week?"
+  },
+  "INTRO": {
+    "SLIDE_1": {
+      "SUB_TITLE": "Live up to your aspirations and thrive.",
+      "BUTTON": "Next"
+    },
+    "SLIDE_2": {
+      "TITLE": "What is Grow?",
+      "SUB_TITLE_1": "Grow will help inspire you and make your everyday life more fulfilling.",
+      "SUB_TITLE_2": "Each time you achieve a weekly goal, this flower will grow a little.",
+      "BUTTON": "Okay"
+    },
+    "SLIDE_3": {
+      "TITLE": "How does it work?",
+      "SUB_TITLE_1": "Each week, set yourself a goal that will enrich your everyday life.",
+      "SUB_TITLE_2": "Whenever you achieve a goal, you’ll get a reward to make your plant grow and flourish.",
+      "BUTTON": "Okay, let’s get going!"
+    }
+  },
+  "WEEKLY_GOAL": {
+    "WEEKLY": "Your weekly goal",
+    "REMAINING": "Time remaining: {{day}}",
+    "DAY": "Day",
+    "DAYS": "Days",
+    "ACHIEVED": "Accomplished",
+    "NOT_ACHIEVED": "Not accomplished",
+    "ADD_A_GOAL": "Set a weekly goal",
+    "INFO": "Accomplish a goal, to make your plant grow and flourish.",
+    "GOAL_ACHIEVED": "Aah, that feels good! Thanks a lot:)",
+    "GOAL_MISSED": "Good things take a while. Next time it's bound to work out."
+  },
+  "GOAL_SELECTION": {
+    "TITLE": "Weekly goal",
+    "SUB_TITLE": "Set your weekly goal",
+    "DESCRIPTION": "Choose an area where you’d like to set a weekly goal.",
+    "CATEGORIES": {
+      "CULTURE": "Culture and growth",
+      "FINANCE": "Property and possessions",
+      "HEALTH": "Health",
+      "HOME": "House and home",
+      "SOCIAL": "Social integration",
+      "SPACE": "Living space and mobility"
+    },
+    "SAVE": "Save weekly goal"
+  },
+  "GOALS": {
+    "HEALTH": {
+      "EAT_FIT": {
+        "TEASER": "Healthy eating",
+        "DETAIL": "This week, I’ll eat vegetables, fruit and salad every day."
+      },
+      "8_HOURS_SLEEP": {
+        "TEASER": "Deep sleep",
+        "DETAIL": "I’m going to get plenty of sleep this week."
+      },
+      "2_LITERS_WATER": {
+        "TEASER": "Cheers!",
+        "DETAIL": "I’ll drink plenty of water this week."
+      },
+      "MEMORY_TRAINING": {
+        "TEASER": "Brain-fit",
+        "DETAIL": "I’ll tackle a crossword puzzle."
+      },
+      "LOSE_WEIGHT": {
+        "TEASER": "A good figure",
+        "DETAIL": "This week I’m going to lose weight… and I’ll set a target."
+      },
+      "HEALTH_CHECK": {
+        "TEASER": "Check-up",
+        "DETAIL": "I’ll make an appointment for a check-up."
+      },
+      "RELAXING": {
+        "TEASER": "Just relax",
+        "DETAIL": " This week I resolve to accept things as they come and make the best of it.<br/><br/> Whenever a negative feeling surfaces, I’ll take a deep breath and remember my resolution."
+      },
+      "LONG_WALK": {
+        "TEASER": "Have a stroll",
+        "DETAIL": "I’ll go for a good walk."
+      },
+      "DEEP_BREATH": {
+        "TEASER": "Take a deep breath",
+        "DETAIL": "Every day, I’ll do 5 minutes’ mindful deep breathing"
+      },
+      "LAUGH": {
+        "TEASER": "Laugh out loud",
+        "DETAIL": "I’ll laugh my heart out again.<br/><br/>What or who would get me laughing?"
+      }
+    },
+    "SOCIAL": {
+      "HELP_A_NEIGHBOR": {
+        "TEASER": "Help a neighbour",
+        "DETAIL": "I’ve often thought about helping my neighbour, but not done so. br/><br/> Now I’ll make contact and offer to give a hand."
+      },
+      "VISIT_A_FRIEND": {
+        "TEASER": "Visit a friend",
+        "DETAIL": "I’ll go and see a friend."
+      },
+      "INVITE_SOMEONE_FOR_A_COFFEE": {
+        "TEASER": "Coffee and cake, anybody?",
+        "DETAIL": "Who have I been meaning to invite? Now’s the time!"
+      },
+      "GO_FOR_A_WALK_WITH_SOMEONE": {
+        "TEASER": "Let’s go for a walk",
+        "DETAIL": "I’ll ask someone to join me for a walk.<br/><br/> If that’s not possible, then we’ll get ourselves a ride."
+      },
+      "FIND_CLASSMATES": {
+        "TEASER": "Old pals",
+        "DETAIL": "I’ll look up my classmates.<br/><br/>And contact one, so we can reminisce on the good old times."
+      },
+      "BENCH_IN_PARC": {
+        "TEASER": "A park bench",
+        "DETAIL": "I’ll find a bench in the park and sit and listen to the birds singing."
+      },
+      "CONTACT_OLD_FRIEND": {
+        "TEASER": "It’s been a while!",
+        "DETAIL": "Is there someone who means a lot to me but I haven’t been in touch with for ages?<br/><br/>I’ll find out how they are."
+      },
+      "GET_HELP": {
+        "TEASER": "Get help or advice",
+        "DETAIL": "I won’t too proud to ask someone for help or advice.<br/><br/> A lot of people like to have a chance to help out."
+      },
+      "LETTER": {
+        "TEASER": "The letter the better",
+        "DETAIL": "I’ll write someone a letter. We don’t do much letter writing these days,<br/><br/>So it’s all the more rewarding when you get one."
+      }
+    },
+    "CULTURE": {
+      "LEARNING_A_LANGUAGE": {
+        "TEASER": "Brush up a foreign language",
+        "DETAIL": "I’ll buy a newspaper in a foreign language or watch a foreign language TV channel for 15 minutes every day this week."
+      },
+      "LEARN_SOMETHING_NEW": {
+        "TEASER": "Learn something new",
+        "DETAIL": "I’ve always wanted to find out about this. And I’m going to do it, this week.<br/><br/>."
+      },
+      "TRAIN": {
+        "TEASER": "A train trip",
+        "DETAIL": "I’ll go on a train journey <br/><br/>Most Gemeinde offer free one-day travel cards."
+      },
+      "ATTEND_A_CONCERT": {
+        "TEASER": "Concert",
+        "DETAIL": "I’ll go to a concert in a concert hall or listen to a street performance.<br/><br/>Or I’ll put on some music at home and sing along at the top of my voice."
+      },
+      "EDUCATION": {
+        "TEASER": "Keep in training",
+        "DETAIL": "I’ll sign up for a course. There’s often an online option."
+      },
+      "CULTURE": {
+        "TEASER": "Culture",
+        "DETAIL": " I’ll go to the cinema, the theatre or a museum. I’ll find something on that’s fun, and get a real kick out of it."
+      },
+      "BOOK": {
+        "TEASER": "Read up!",
+        "DETAIL": "I’ll borrow or buy a book and get reading!"
+      },
+      "PICASSO": {
+        "TEASER": "Picasso",
+        "DETAIL": "I’ll paint a picture."
+      },
+      "DO_SOMETHING_JUST_FOR_YOURSELF": {
+        "TEASER": "Just for me",
+        "DETAIL": "I’ll lay aside time to do something for myself."
+      },
+      "LISTEN_TO_MUSIC": {
+        "TEASER": "Put on a record",
+        "DETAIL": " Each day I’ll listen to a piece of music that used to mean a lot to me.<br/><br/> If I no longer have it, I’ll look for it on <a class=\"culture\" href=\"https://youtube.com\" target=\"_blank\" rel=\"noopener noreferrer\">youtube.com</a>."
+      },
+      "GAME": {
+        "TEASER": "Fun and games",
+        "DETAIL": "I’ll play a game. And I can decide what, where and who with."
+      },
+      "PODCAST": {
+        "TEASER": "Radio play",
+        "DETAIL": " I’ll listen to a podcast.<br/><br/>For example, on <a class=\"culture\" href=\"https://www.podcastclub.ch\" target=\"_blank\" rel=\"noopener noreferrer\">podcastclub.ch</a> or <a class=\"culture\" href=\"https://www.srf.ch/audio/themen\" target=\"_blank\" rel=\"noopener noreferrer\">srf.ch</a>"
+      }
+    },
+    "HOME": {
+      "SPRING_CLEANING": {
+        "TEASER": "Spring cleaning",
+        "DETAIL": "I’ll do a spring, summer, autumn or winter-clean. Depending on my mood and the season."
+      },
+      "VACUUM": {
+        "TEASER": "Out with the vacuum cleaner…",
+        "DETAIL": "…and away with the dust."
+      },
+      "CLEAN_THE_WINDOWS": {
+        "TEASER": "Room with a view",
+        "DETAIL": "I’ll clean the windows or call a window cleaner."
+      },
+      "CLEAN_AIR": {
+        "TEASER": "Fresh air",
+        "DETAIL": "I’ll air the flat thoroughly every morning."
+      },
+      "CLEAR_THINGS": {
+        "TEASER": "A clear out",
+        "DETAIL": "I’ll go round the flat and make a pile of the things I don’t need."
+      },
+      "REMOVE_WASTE": {
+        "TEASER": "Cast off your burdens",
+        "DETAIL": "I’ll get rid of something I no longer need.<br/><br/>That’ll free me up. Give it away, sell it or recycle it."
+      },
+      "CONVERSION": {
+        "TEASER": "Change around",
+        "DETAIL": "I’ll change things round. That’ll keep me on my toes."
+      },
+      "FLOWERS": {
+        "TEASER": "Flower power",
+        "DETAIL": "I’ll pick or buy some flowers and arrange them in a vase."
+      },
+      "CHANGE_OF_SCENE": {
+        "TEASER": "Change of scene",
+        "DETAIL": "I’ll make a change at home:<br/><br/> Hang up a picture, paint a wall, or rearrange the furniture."
+      }
+    },
+    "SPACE": {
+      "EXPLORE": {
+        "TEASER": "Explore the neighbourhood",
+        "DETAIL": "I’ll go out and get to know my neighbourhood .<br/><br/> If that’s not possible, I’ll make a virtual tour on Google Maps (<a class=\"space\" href=\"https://maps.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">maps.google.com</a>)."
+      },
+      "VISIT_A_LOCAL_SHOP": {
+        "TEASER": "Visit your local",
+        "DETAIL": "I’ll go to the same shop, newsstand or café several times this week.<br/><br/>Now let’s see, does anybody recognise me?"
+      },
+      "HAVE_A_COFFEE": {
+        "TEASER": "Go out for a coffee",
+        "DETAIL": "My coffee machine needs a break too."
+      },
+      "VISIT_TREE": {
+        "TEASER": "Visit a tree",
+        "DETAIL": "I’ll visit a particularly beautiful tree.<br/><br/>I can always take a photo and send it to a friend."
+      },
+      "SIT_ON_A_BENCH": {
+        "TEASER": "A seat in the park",
+        "DETAIL": "I’ll find a nice park bench; perhaps while I’m sitting there I’ll meet someone new."
+      },
+      "TRAIN": {
+        "TEASER": "A train trip",
+        "DETAIL": "I’ll go on a short train journey. Many Gemeinde offer free day passes.<br/><br/> Otherwise a day ticket for the local network will do."
+      },
+      "NOT_ALONE": {
+        "TEASER": "Not alone",
+        "DETAIL": "I’ll go where there are other people and mingle with them."
+      },
+      "BIODIVERSITY": {
+        "TEASER": "The birds and the bees",
+        "DETAIL": "I’ll support biodiversity in my neighbourhood by planting something.<br/><br/>Here are some ideas: <a class=\"space\" href=\"https://www.futureplanter.ch/de/empfehlung/start\" target=\"_blank\" rel=\"noopener noreferrer\">futureplanter.ch</a>"
+      }
+    },
+    "FINANCE": {
+      "REMOVE_WASTE": {
+        "TEASER": "Cast off your burdens",
+        "DETAIL": "I’ll get rid of an item I no longer need.<br/><br/>Give it away, sell it, or recycle it."
+      },
+      "THROUGH_BOOKS": {
+        "TEASER": "Check the records",
+        "DETAIL": "I’ll go through my accounts to see if I’m paying for something I no longer need."
+      },
+      "AUCTION": {
+        "TEASER": "Sell-off",
+        "DETAIL": "I’ll sell something I don’t need, so someone else can enjoy it.<br/><br/> e.g on Ricardo (<a class=\"finance\" href=\"https://ricardo.ch\" target=\"_blank\" rel=\"noopener noreferrer\">ricardo.ch</a>)."
+      },
+      "I_HAVE_TOO_MUCH": {
+        "TEASER": "I have too much...",
+        "DETAIL": "... so I’ll contribute to a good cause."
+      },
+      "I_HAVE_NO_ENOUGH": {
+        "TEASER": "I don’t have enough...",
+        "DETAIL": "... so I’ll ask someone to help me out."
+      },
+      "LOCAL_OFFERING": {
+        "TEASER": "Good deal!",
+        "DETAIL": "I’ll have a look for reduced items and free offers in my area."
+      },
+      "GRATITUDE": {
+        "TEASER": "Gratitude",
+        "DETAIL": "I’ll remember to be thankful each day for all that I have."
+      },
+      "NOT_EATING_ENOUGH_THERE": {
+        "TEASER": "Not enough to eat?",
+        "DETAIL": "The organisation “Tischlein deck dich”(<a class=\"finance\" href=\"https://tischlein.ch\" target=\"_blank\" rel=\"noopener noreferrer\">tischlein.ch</a> distributes surplus food to those in need."
+      },
+      "EAT_WITH_SOMEONE": {
+        "TEASER": "More than enough to eat?",
+        "DETAIL": "I’ll invite someone over for a meal."
+      },
+      "ELEGANCE": {
+        "TEASER": "Elegance",
+        "DETAIL": "I’ll put on my best outfit and take a selfie."
+      }
+    }
+  }
+}

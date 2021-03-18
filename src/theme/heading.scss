@@ -1,0 +1,23 @@
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--heading-big-font-size);
+  line-height: var(--heading-big-line-height);
+  font-weight: var(--heading-big-font-weight);
+}
+
+h2 {
+  font-size: var(--heading-small-font-size);
+  line-height: var(--heading-small-line-height);
+  font-weight: var(--heading-small-font-weight);
+}
+
+p {
+  font-size: var(--lead-font-size);
+  line-height: var(--lead-line-height);
+  font-weight: var(--lead-font-weight);
+}

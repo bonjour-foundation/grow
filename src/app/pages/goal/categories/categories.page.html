@@ -1,0 +1,24 @@
+<ion-content color="light">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home" color="medium" [text]="'CORE.BACK' | translate"></ion-back-button>
+      </ion-buttons>
+
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <main class="grid ion-padding-start ion-padding-end">
+    <app-goal-title icon="./assets/img/weekly-goal.svg" title="GOAL_SELECTION.TITLE" subTitle="GOAL_SELECTION.DESCRIPTION"></app-goal-title>
+
+    <section class="categories ion-margin-top">
+      <app-goal-category category="health" icon="./assets/img/categories/health.svg" title="GOAL_SELECTION.CATEGORIES.HEALTH"></app-goal-category>
+      <app-goal-category category="social" icon="./assets/img/categories/social.svg" title="GOAL_SELECTION.CATEGORIES.SOCIAL"></app-goal-category>
+      <app-goal-category category="culture" icon="./assets/img/categories/culture.svg" title="GOAL_SELECTION.CATEGORIES.CULTURE"></app-goal-category>
+      <app-goal-category category="home" icon="./assets/img/categories/home.svg" title="GOAL_SELECTION.CATEGORIES.HOME"></app-goal-category>
+      <app-goal-category category="space" icon="./assets/img/categories/space.svg" title="GOAL_SELECTION.CATEGORIES.SPACE"></app-goal-category>
+      <app-goal-category category="finance" icon="./assets/img/categories/finance.svg" title="GOAL_SELECTION.CATEGORIES.FINANCE"></app-goal-category>
+    </section>
+  </main>
+</ion-content>

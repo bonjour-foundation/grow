@@ -1,0 +1,12 @@
+ion-header {
+  --ion-toolbar-background: transparent;
+  --ion-toolbar-border-color: transparent;
+
+  ion-back-button {
+    text-transform: capitalize;
+  }
+}
+
+.header-md:after {
+  background: none;
+}

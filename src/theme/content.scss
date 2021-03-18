@@ -1,0 +1,35 @@
+ion-content {
+  ion-toolbar {
+    --min-height: 32px;
+  }
+
+  img {
+    pointer-events: none;
+    user-select: none;
+  }
+
+  main {
+    max-width: 576px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &.grid {
+      display: grid;
+
+      justify-content: center;
+      align-items: center;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+
+      width: 100%;
+
+      @media (min-height: 732px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

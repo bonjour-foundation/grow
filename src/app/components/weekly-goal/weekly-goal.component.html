@@ -1,0 +1,25 @@
+<ng-container *ngIf="goal; else noGoal">
+  <ion-icon src="./assets/img/weekly-goal.svg" role="presentation"></ion-icon>
+
+  <h2 class="ion-margin-bottom">{{ 'WEEKLY_GOAL.WEEKLY' | translate }}</h2>
+
+  <ion-badge color="{{ goal.category + '-light' }}" mode="ios" class="ion-margin">{{
+    'GOALS.' + goal.category.toUpperCase() + '.' + goal.goal.toUpperCase() + '.TEASER' | translate
+  }}</ion-badge>
+
+  <p>{{ 'WEEKLY_GOAL.REMAINING' | translate: {day: goal.expire_in} }}</p>
+
+  <div class="actions ion-padding">
+    <ion-button mode="ios" shape="round" color="primary" expand="block" (click)="achieved()">{{ 'WEEKLY_GOAL.ACHIEVED' | translate }}</ion-button>
+
+    <button class="link" (click)="missed()">{{ 'WEEKLY_GOAL.NOT_ACHIEVED' | translate }}</button>
+  </div>
+</ng-container>
+
+<ng-template #noGoal>
+  <p class="ion-text-center ion-padding no-goal-info">{{ 'WEEKLY_GOAL.INFO' | translate }}</p>
+
+  <div class="no-goal-actions ion-padding">
+    <ion-button mode="ios" shape="round" color="primary" expand="block" [routerLink]="'/categories'">{{ 'WEEKLY_GOAL.ADD_A_GOAL' | translate }}</ion-button>
+  </div>
+</ng-template>

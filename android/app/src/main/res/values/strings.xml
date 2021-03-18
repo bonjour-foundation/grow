@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Grow</string>
+    <string name="title_activity_main">Grow</string>
+    <string name="package_name">help.bonjour.grow</string>
+    <string name="custom_url_scheme">help.bonjour.grow</string>
+</resources>

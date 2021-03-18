@@ -1,0 +1,111 @@
+ion-slides {
+  height: 100%;
+
+  ion-slide {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow: hidden;
+
+    main {
+      z-index: 2;
+
+      h1 {
+        padding-top: 16px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        padding: 16px 0;
+        max-width: 340px;
+      }
+    }
+
+    img.grow,
+    img.water {
+      position: absolute;
+      bottom: 19vh;
+      left: 50%;
+
+      z-index: 1;
+    }
+
+    img.grow {
+      transform: translate(-50%, 0);
+      width: 40vh;
+    }
+
+    img.water {
+      transform: translate(4%, -46%) rotate(12deg);
+      width: 26vh;
+    }
+
+    div.bottom {
+      background: var(--ion-color-background-flower-bottom);
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 24vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      ion-button {
+        min-width: 220px;
+      }
+    }
+  }
+
+  ion-slide.grow {
+    main {
+      h1 {
+        padding-top: 16px;
+        font-size: 4rem;
+      }
+
+      img.grow-logo,
+      img.bonjour-logo {
+        width: 150px;
+      }
+
+      img.grow-logo {
+        padding-top: 5vh;
+      }
+
+      img.bonjour-logo {
+        padding-top: 48px;
+      }
+
+      p {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  ion-slide.animated {
+    img.grow {
+      transition: opacity 0.75s ease-out;
+      opacity: 0;
+
+      &.display {
+        opacity: 1;
+      }
+    }
+
+    img.water {
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+
+      &.display {
+        opacity: 1;
+      }
+    }
+  }
+}

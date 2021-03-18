@@ -1,0 +1,72 @@
+:host {
+  background: white;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  box-shadow: 0 0 26px 0 var(--ion-color-medium);
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 100%;
+  max-width: 576px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  max-height: 0;
+  transition: max-height 0.5s ease-in;
+
+  z-index: 99;
+}
+
+:host(.display) {
+  max-height: 100%;
+}
+
+ion-icon {
+  font-size: 42px;
+  padding: 32px 8px 16px;
+}
+
+ion-badge {
+  font-size: var(--lead-font-size);
+  line-height: var(--lead-line-height);
+  font-weight: var(--lead-font-weight);
+
+  border-radius: 48px;
+
+  padding: 16px 32px;
+
+  max-width: calc(100% - 16px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div.actions {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 8px;
+
+  width: calc(100% - 16px);
+  max-width: 460px;
+
+  margin: 8px 16px 32px 0;
+
+  > button {
+    justify-self: center;
+  }
+}
+
+div.no-goal-actions {
+  padding: 0 16px 48px;
+}
+
+p.no-goal-info {
+  margin-top: 48px;
+}

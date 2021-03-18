@@ -1,0 +1,78 @@
+main {
+  grid-template-rows: auto 1fr 1fr;
+}
+
+section.goal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ion-icon {
+    font-size: 18rem;
+    margin: 0 16px 16px;
+  }
+}
+
+section.save {
+  align-self: center;
+  justify-self: center;
+}
+
+::ng-deep a {
+  color: inherit;
+
+  &.health {
+    text-decoration-color: var(--ion-color-health);
+
+    :focus,
+    :active {
+      text-decoration-color: var(--ion-color-health);
+    }
+  }
+
+  &.social {
+    text-decoration-color: var(--ion-color-social);
+
+    :focus,
+    :active {
+      text-decoration-color: var(--ion-color-social);
+    }
+  }
+
+  &.culture {
+    text-decoration-color: var(--ion-color-culture);
+
+    :focus,
+    :active {
+      text-decoration-color: var(--ion-color-culture);
+    }
+  }
+
+  &.home {
+    text-decoration-color: var(--ion-color-home);
+
+    :focus,
+    :active {
+      text-decoration-color: var(--ion-color-home);
+    }
+  }
+
+  &.space {
+    text-decoration-color: var(--ion-color-space);
+
+    :focus,
+    :active {
+      text-decoration-color: var(--ion-color-space);
+    }
+  }
+
+  &.finance {
+    text-decoration-color: var(--ion-color-finance);
+
+    :focus,
+    :active {
+      text-decoration-color: var(--ion-color-finance);
+    }
+  }
+}

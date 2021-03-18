@@ -1,0 +1,35 @@
+<ion-content color="light">
+  <ion-header>
+    <ion-toolbar color="light">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/categories" color="medium" [text]="'CORE.BACK' | translate"></ion-back-button>
+      </ion-buttons>
+
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <main class="grid ion-padding-start ion-padding-end">
+    <ng-container *ngIf="category">
+      <app-goal-title
+        icon="./assets/img/categories/{{ category }}.svg"
+        title="{{ 'GOAL_SELECTION.CATEGORIES.' + category.toUpperCase() | translate }}"
+        subTitle="GOAL_SELECTION.SUB_TITLE"
+      ></app-goal-title>
+    </ng-container>
+
+    <section class="actions ion-margin-top ion-margin-bottom">
+      <ion-button
+        mode="ios"
+        shape="round"
+        [color]="goal === selected ? category + '-light' : 'category'"
+        expand="block"
+        *ngFor="let goal of goals$ | async"
+        [className]="category"
+        (click)="select(goal)"
+      >
+        {{ 'GOALS.' + category.toUpperCase() + '.' + goal.toUpperCase() + '.TEASER' | translate }}
+      </ion-button>
+    </section>
+  </main>
+</ion-content>

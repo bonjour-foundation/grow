@@ -1,0 +1,107 @@
+:host {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  background: var(--ion-color-light);
+}
+
+div.bottom {
+  background: var(--ion-color-background-flower-bottom);
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+}
+
+img.grow,
+img.water {
+  z-index: 1;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+img.grow {
+  transform: translate(-50%, -110%);
+
+  width: 32vh;
+
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+
+  &.display {
+    opacity: 1;
+  }
+}
+
+img.water {
+  transform: translate(-5%, -170%);
+
+  width: 21vh;
+
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+
+  &.display {
+    opacity: 1;
+  }
+}
+
+div.info {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate3d(-50%, -50%, 2px);
+
+  padding: 32px 16px;
+
+  width: 300px;
+
+  border-radius: 30px;
+
+  background: white;
+  box-shadow: 0 0 26px 0 var(--ion-color-medium);
+
+  transition: opacity 0.5s ease-in;
+  opacity: 0;
+
+  &.display {
+    opacity: 1;
+  }
+
+  div.triangle {
+    z-index: 1;
+
+    position: absolute;
+    top: -85px;
+    left: 25px;
+
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+
+    transform: scale(0.7);
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: white;
+      transform: rotate(45deg);
+      top: 75px;
+      left: 25px;
+      box-shadow: 0 0 26px 0 var(--ion-color-medium);
+    }
+  }
+}

@@ -1,0 +1,101 @@
+/* nunito-sans-regular - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/nunito-sans-v4-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Nunito Sans Regular"), local("NunitoSans-Regular"), url("/assets/fonts/nunito-sans-v4-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-regular.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/nunito-sans-v4-latin-700.eot"); /* IE9 Compat Modes */
+  src: local("Nunito Sans Bold"), local("NunitoSans-Bold"), url("/assets/fonts/nunito-sans-v4-latin-700.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-700.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-700.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-700.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-700.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+
+/* nunito-sans-800 - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/assets/fonts/nunito-sans-v4-latin-800.eot"); /* IE9 Compat Modes */
+  src: local("Nunito Sans ExtraBold"), local("NunitoSans-ExtraBold"), url("/assets/fonts/nunito-sans-v4-latin-800.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-800.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-800.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-800.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-800.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+
+/* nunito-sans-900 - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/assets/fonts/nunito-sans-v4-latin-900.eot"); /* IE9 Compat Modes */
+  src: local("Nunito Sans Black"), local("NunitoSans-Black"), url("/assets/fonts/nunito-sans-v4-latin-900.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-900.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-900.woff") format("woff"),
+    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-900.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-900.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+
+* {
+  // Fonts
+  font-family: "Nunito Sans";
+  --ion-font-family: "Nunito Sans";
+}
+
+:root {
+  font-size: 75%;
+
+  --heading-big-font-size: 2.625rem;
+  --heading-big-line-height: 2.85rem;
+  --heading-big-font-weight: 900;
+
+  --heading-small-font-size: 1.75rem;
+  --heading-small-line-height: 1.9166666666666667rem;
+  --heading-small-font-weight: 900;
+
+  --subtitles-font-size: 1.5833333333333333rem;
+  --subtitles-line-height: 1.6666666666666667rem;
+  --subtitles-font-weight: 900;
+
+  --status-font-size: 1.4166666666666667rem;
+  --status-line-height: 1.5833333333333333rem;
+  --status-font-weight: 800;
+
+  --button-font-size: 1.5833333333333333rem;
+  --button-line-height: 1.6666666666666667rem;
+  --button-font-weight: 700;
+
+  --navigation-font-size: 1.25rem;
+  --navigation-line-height: 1.6666666666666667rem;
+  --navigation-font-weight: 700;
+
+  --lead-font-size: 1.5833333333333333rem;
+  --lead-line-height: 1.9166666666666667rem;
+  --lead-font-weight: 400;
+
+  --text-font-size: 1.25rem;
+  --text-line-height: 1.6666666666666667rem;
+  --text-font-weight: 400;
+
+  --contact-font-size: 1.75rem;
+  --contact-line-height: 2.25rem;
+  --contact-font-weight: 400;
+
+  --captions-font-size: 1rem;
+  --captions-line-height: 1.3333333333333333rem;
+  --captions-font-weight: 400;
+}

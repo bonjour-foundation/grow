@@ -1,0 +1,65 @@
+main {
+  grid-template-rows: auto 1fr 1fr;
+}
+
+section.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  align-self: center;
+  justify-self: center;
+
+  max-width: 460px;
+
+  ion-button {
+    margin: 8px 4px;
+    font-weight: 400;
+
+    --border-width: 1px;
+    --border-style: solid;
+
+    max-width: 100%;
+    white-space: inherit;
+
+    --padding-start: 16px;
+    --padding-end: 16px;
+
+    --opacity: 1;
+
+    &.health {
+      --border-color: var(--ion-color-health);
+      --ripple-color: var(--ion-color-health);
+
+      &.selected {
+        --background-color: var(--ion-color-health);
+      }
+    }
+
+    &.social {
+      --border-color: var(--ion-color-social);
+      --ripple-color: var(--ion-color-social);
+    }
+
+    &.culture {
+      --border-color: var(--ion-color-culture);
+      --ripple-color: var(--ion-color-culture);
+    }
+
+    &.home {
+      --border-color: var(--ion-color-home);
+      --ripple-color: var(--ion-color-home);
+    }
+
+    &.space {
+      --border-color: var(--ion-color-space);
+      --ripple-color: var(--ion-color-space);
+    }
+
+    &.finance {
+      --border-color: var(--ion-color-finance);
+      --ripple-color: var(--ion-color-finance);
+    }
+  }
+}

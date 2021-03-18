@@ -1,0 +1,55 @@
+ion-button {
+  height: 2.4em;
+
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: var(--button-line-height);
+
+  --box-shadow: 0 4px 8px 0 var(--ion-color-medium);
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+button.link {
+  border: none;
+  margin: 0;
+  padding: 8px 4px;
+  width: fit-content;
+  outline: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  background: inherit;
+
+  color: var(--ion-color-medium);
+
+  font-size: var(--text-font-size);
+  font-weight: var(--text-font-weight);
+  line-height: var(--text-line-height);
+
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+  }
+}
+
+ion-fab-button {
+  height: 74px;
+  width: 74px;
+
+  --box-shadow: 0 3px 5px -1px rgba(181, 162, 131, 0.2), 0 6px 10px 0 rgba(181, 162, 131, 0.14), 0 1px 18px 0 rgba(181, 162, 131, 0.12);
+
+  ion-icon {
+    font-size: 42px;
+  }
+}
