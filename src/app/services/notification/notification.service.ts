@@ -4,9 +4,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 import {addDays} from 'date-fns';
 
-import {Plugins} from '@capacitor/core';
-import {LocalNotificationPendingList} from '@capacitor/core/dist/esm/core-plugin-definitions';
-const {LocalNotifications} = Plugins;
+import {PendingResult, LocalNotifications} from '@capacitor/local-notifications';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +13,7 @@ export class NotificationService {
   constructor(private translateService: TranslateService) {}
 
   async schedule() {
-    await LocalNotifications.requestPermission();
+    await LocalNotifications.requestPermissions();
 
     const title: string = this.translateService.instant('NOTIFICATION.TITLE');
     const body: string = this.translateService.instant('NOTIFICATION.BODY');
@@ -35,7 +33,7 @@ export class NotificationService {
   }
 
   async reset() {
-    const pending: LocalNotificationPendingList = await LocalNotifications.getPending();
+    const pending: PendingResult = await LocalNotifications.getPending();
 
     if (!pending || !pending.notifications || pending.notifications.length <= 0) {
       return;
