@@ -31,5 +31,3 @@ plugins
 www
 
 .firebase
-
-ios/App/App/**/*
