@@ -35,7 +35,7 @@
   },
   "WEEKLY_GOAL": {
     "WEEKLY": "Your weekly goal",
-    "REMAINING": "Time remaining: {{day}}",
+    "REMAINING": "Time remaining:",
     "DAY": "Day",
     "DAYS": "Days",
     "TODAY": "Today",

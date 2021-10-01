@@ -35,7 +35,7 @@
   },
   "WEEKLY_GOAL": {
     "WEEKLY": "Dein Wochenziel",
-    "REMAINING": "Verbleibende Zeit: {{day}}",
+    "REMAINING": "Verbleibende Zeit:",
     "DAY": "Tag",
     "DAYS": "Tage",
     "TODAY": "Heute",
