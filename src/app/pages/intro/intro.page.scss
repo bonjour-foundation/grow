@@ -75,6 +75,12 @@ ion-slides {
         width: 150px;
       }
 
+      @media (max-height: 610px) {
+        img.bonjour-logo {
+          display: none;
+        }
+      }
+
       img.grow-logo {
         padding-top: 5vh;
       }
