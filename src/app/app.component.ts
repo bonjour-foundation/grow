@@ -8,8 +8,7 @@ import {MsgService} from './services/msg/msg.service';
 import {GoalsService} from './services/goals/goals.service';
 import {GrowService} from './services/grow/grow.service';
 
-import { Plugins } from '@capacitor/core';
-const { SplashScreen } = Plugins;
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
