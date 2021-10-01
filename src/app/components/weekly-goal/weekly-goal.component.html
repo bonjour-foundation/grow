@@ -1,4 +1,4 @@
-<ng-container *ngIf="goal; else noGoal">
+<ng-container *ngIf="(goal$ | async) as goal; else noGoal">
   <ion-icon src="./assets/img/weekly-goal.svg" role="presentation"></ion-icon>
 
   <h2 class="ion-margin-bottom">{{ 'WEEKLY_GOAL.WEEKLY' | translate }}</h2>

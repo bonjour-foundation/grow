@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {NavController} from '@ionic/angular';
 
-import {Observable} from 'rxjs';
+import {map, Observable} from 'rxjs';
 
 import {GoalsService} from '../../../../services/goals/goals.service';
 
@@ -14,7 +14,7 @@ import {GoalsService} from '../../../../services/goals/goals.service';
 export class ListPage {
   category: string;
 
-  goals$: Observable<string>;
+  goals$: Observable<string[]>;
 
   selected: string | undefined = undefined;
 
@@ -25,7 +25,7 @@ export class ListPage {
 
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
 
-    this.goals$ = this.goalsService.goals(this.category);
+    this.goals$ = this.goalsService.goals$.pipe(map((goals: Record<string, string[]>) => goals[this.category]));
   }
 
   select(goal: string) {

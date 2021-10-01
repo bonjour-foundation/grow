@@ -7,18 +7,10 @@ import {Observable, Subject} from 'rxjs';
 })
 export class MsgService {
   private msgSubject: Subject<string> = new Subject();
+  readonly msg$: Observable<string> = this.msgSubject.asObservable();
 
   private errorSubject: Subject<string> = new Subject();
-
-  constructor() {}
-
-  watchMsg(): Observable<string> {
-    return this.msgSubject.asObservable();
-  }
-
-  watchError(): Observable<string> {
-    return this.errorSubject.asObservable();
-  }
+  readonly error$: Observable<string> = this.errorSubject.asObservable();
 
   msg(content: string) {
     this.msgSubject.next(content);

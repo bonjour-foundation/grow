@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 
-import {Observable, of, ReplaySubject} from 'rxjs';
+import {catchError, from, Observable, of, ReplaySubject, switchMap, tap, throwError} from 'rxjs';
 
 import {del, get, set} from 'idb-keyval';
 
@@ -10,9 +10,10 @@ import {addDays} from 'date-fns';
   providedIn: 'root',
 })
 export class GoalsService {
-  private goal: ReplaySubject<Goal | undefined> = new ReplaySubject(1);
+  private goalSubject: ReplaySubject<Goal | undefined> = new ReplaySubject(1);
+  readonly goal$: Observable<Goal | undefined> = this.goalSubject.asObservable();
 
-  private allGoals: Goals = {
+  readonly goals$: Observable<Record<string, string[]>> = of({
     health: ['eat_fit', '8_hours_sleep', '2_liters_water', 'memory_training', 'lose_weight', 'health_check', 'relaxing', 'long_walk', 'deep_breath', 'laugh'],
     social: [
       'help_a_neighbor',
@@ -53,11 +54,7 @@ export class GoalsService {
       'eat_with_someone',
       'elegance',
     ],
-  };
-
-  goals(category: string): Observable<string> {
-    return of(this.allGoals[category]);
-  }
+  });
 
   add(category: string, goal: string): Promise<void> {
     return new Promise<void>(async (resolve, reject) => {
@@ -70,7 +67,7 @@ export class GoalsService {
 
         await set('goal', newGoal);
 
-        this.goal.next(newGoal);
+        this.goalSubject.next(newGoal);
 
         resolve();
       } catch (err) {
@@ -79,27 +76,19 @@ export class GoalsService {
     });
   }
 
-  init(): Promise<void> {
-    return new Promise<void>(async (resolve, reject) => {
-      try {
-        const goal: Goal = await get('goal');
-
-        this.goal.next(goal);
-
-        resolve();
-      } catch (err) {
-        this.goal.next(undefined);
-        reject(err);
-      }
-    });
-  }
-
-  watch(): Observable<Goal> {
-    return this.goal.asObservable();
+  init(): Observable<void> {
+    return from(get('goal')).pipe(
+      tap((goal: Goal) => this.goalSubject.next(goal)),
+      catchError((err) => {
+        this.goalSubject.next(undefined);
+        return throwError(err);
+      }),
+      switchMap(() => of(void 0))
+    );
   }
 
   async reset() {
     await del('goal');
-    this.goal.next(undefined);
+    this.goalSubject.next(undefined);
   }
 }

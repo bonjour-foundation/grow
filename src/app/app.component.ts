@@ -1,23 +1,22 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {ToastController} from '@ionic/angular';
 
-import {Subscription} from 'rxjs';
+import {catchError, forkJoin, from, Observable, of, Subject, takeUntil} from 'rxjs';
 
 import {MsgService} from './services/msg/msg.service';
 import {GoalsService} from './services/goals/goals.service';
 import {GrowService} from './services/grow/grow.service';
 
-import { SplashScreen } from '@capacitor/splash-screen';
+import {SplashScreen} from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  private msgSubscription: Subscription;
-  private errorSubscription: Subscription;
+export class AppComponent implements OnInit, OnDestroy {
+  private destroy$: Subject<void> = new Subject<void>();
 
   constructor(
     private toastController: ToastController,
@@ -30,20 +29,22 @@ export class AppComponent implements OnInit {
   async ngOnInit() {
     this.initializeTranslateServiceConfig();
 
-    const initServices: Promise<void>[] = [this.initGoal(), this.initGrow()];
-    await Promise.all(initServices);
+    forkJoin([this.initGoal(), this.initGrow()])
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(async () => await SplashScreen.hide());
 
-    await this.initGoal();
-
-    this.msgSubscription = this.msgService.watchMsg().subscribe(async (msg: string) => {
+    this.msgService.msg$.pipe(takeUntil(this.destroy$)).subscribe(async (msg: string) => {
       await this.presentMsgToast(msg);
     });
 
-    this.errorSubscription = this.msgService.watchError().subscribe(async (error: string) => {
+    this.msgService.error$.pipe(takeUntil(this.destroy$)).subscribe(async (error: string) => {
       await this.presentMsgToast(error, 'danger');
     });
+  }
 
-    await SplashScreen.hide();
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   private initializeTranslateServiceConfig() {
@@ -65,19 +66,11 @@ export class AppComponent implements OnInit {
     await toast.present();
   }
 
-  private async initGoal() {
-    try {
-      await this.goalsService.init();
-    } catch (err) {
-      this.presentMsgToast('ERROR.GOAL_NOT_LOADED');
-    }
+  private initGoal(): Observable<void> {
+    return this.goalsService.init().pipe(catchError(() => from(this.presentMsgToast('ERROR.GOAL_NOT_LOADED'))));
   }
 
-  private async initGrow() {
-    try {
-      await this.growService.init();
-    } catch (err) {
-      this.presentMsgToast('ERROR.GROW_NOT_LOADED');
-    }
+  private initGrow() {
+    return this.growService.init().pipe(catchError(() => from(this.presentMsgToast('ERROR.GROW_NOT_LOADED'))));
   }
 }
