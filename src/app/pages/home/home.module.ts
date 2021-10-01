@@ -7,6 +7,7 @@ import {RouterModule} from '@angular/router';
 import {HomePage} from './home.page';
 import {WeeklyGoalModule} from '../../components/weekly-goal/weekly-goal.module';
 import {FlowerModule} from '../../components/flower/flower.module';
+import {OpenInfoModule} from '../../components/open-info/open-info.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import {FlowerModule} from '../../components/flower/flower.module';
     ]),
     WeeklyGoalModule,
     FlowerModule,
+    OpenInfoModule,
   ],
   declarations: [HomePage],
 })

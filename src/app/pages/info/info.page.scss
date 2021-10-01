@@ -1,0 +1,46 @@
+section {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+img.grow-logo, img.social-logo {
+  width: 8rem;
+}
+
+img.social-logo {
+  margin-top: 24px;
+}
+
+p {
+  margin-top: 20px;
+  max-width: 80%;
+}
+
+a {
+  margin-top: 4px;
+
+  &.grow-link {
+    margin-top: 24px;
+  }
+}
+
+hr {
+  margin-top: 24px;
+  width: 80%;
+  border-bottom: 1.2px solid rgba(var(--ion-color-dark-rgb), 0.2);
+}
+
+ion-icon.github-logo {
+  margin-top: 24px;
+  font-size: 4rem;
+}
+
+p.making {
+  color: var(--ion-color-medium);
+  max-width: 100%;
+}

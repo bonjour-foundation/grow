@@ -304,5 +304,14 @@
         "DETAIL": "I’ll put on my best outfit and take a selfie."
       }
     }
+  },
+  "INFO": {
+    "LINK": "Information",
+    "OPEN_SOURCE": "Grow is a collaborative open source project powered by the Bonjour Foundation.",
+    "MORE": "More information",
+    "TELL_US": "Tell us what you think!",
+    "CO_CREATE": "Co-create this app!",
+    "IN_THE_MAKING": "Bonjour apps are prototypes and not glossy apps. They’re meant to inspire and will hopefully lead to social innovations.",
+    "FOUNDATION": "Bonjour Foundation 2021"
   }
 }
