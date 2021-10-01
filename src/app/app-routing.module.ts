@@ -35,6 +35,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/goal/goal/detail/detail.module').then((m) => m.DetailPageModule),
     canActivate: [IntroGuard, GoalGuard],
   },
+  {
+    path: 'info',
+    loadChildren: () => import('./pages/info/info.module').then((m) => m.InfoPageModule),
+    canActivate: [IntroGuard],
+  }
 ];
 
 @NgModule({

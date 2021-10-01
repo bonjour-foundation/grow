@@ -2,14 +2,12 @@
   <ion-header>
     <ion-toolbar color="light">
       <ion-buttons slot="start">
-        <app-open-info></app-open-info>
+        <ion-back-button defaultHref="/home" color="medium" [text]="'CORE.BACK' | translate"></ion-back-button>
       </ion-buttons>
 
       <ion-title></ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-flower></app-flower>
-
-  <app-weekly-goal [display]="animate"></app-weekly-goal>
+  <main class="grid ion-padding-start ion-padding-end"></main>
 </ion-content>
