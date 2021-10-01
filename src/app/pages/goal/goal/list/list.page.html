@@ -18,13 +18,13 @@
       ></app-goal-title>
     </ng-container>
 
-    <section class="actions ion-margin-top ion-margin-bottom">
+    <section class="actions ion-margin-top ion-margin-bottom" *ngIf="(goals$ | async) as goals">
       <ion-button
         mode="ios"
         shape="round"
         [color]="goal === selected ? category + '-light' : 'category'"
         expand="block"
-        *ngFor="let goal of goals$ | async"
+        *ngFor="let goal of goals"
         [className]="category"
         (click)="select(goal)"
       >

@@ -1,6 +1,6 @@
-import {Component, HostBinding, Input, OnDestroy, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnDestroy} from '@angular/core';
 
-import {Subscription} from 'rxjs';
+import {first, map, Observable, Subject, takeUntil} from 'rxjs';
 
 import {differenceInDays} from 'date-fns';
 
@@ -19,38 +19,34 @@ interface PopulateGoal extends Goal {
   templateUrl: './weekly-goal.component.html',
   styleUrls: ['./weekly-goal.component.scss'],
 })
-export class WeeklyGoalComponent implements OnInit, OnDestroy {
+export class WeeklyGoalComponent implements OnDestroy {
   @HostBinding('class.display')
   @Input()
   display = false;
 
-  goal: PopulateGoal;
+  goal$: Observable<PopulateGoal | undefined> = this.goalsService.goal$.pipe(
+    map((goal: Goal | undefined) =>
+      goal !== undefined
+        ? {
+            ...goal,
+            expire_in: this.expire(goal.expire_at),
+          }
+        : undefined
+    )
+  );
 
-  private subscription: Subscription;
+  private destroy$: Subject<void> = new Subject<void>();
 
   constructor(
     private translateService: TranslateService,
     private goalsService: GoalsService,
-    private noticiationService: NotificationService,
+    private notificationService: NotificationService,
     private growService: GrowService
   ) {}
 
-  ngOnInit() {
-    this.subscription = this.goalsService.watch().subscribe((goal: Goal) => {
-      this.goal =
-        goal !== undefined
-          ? {
-              ...goal,
-              expire_in: this.expire(goal.expire_at),
-            }
-          : undefined;
-    });
-  }
-
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   private expire(input: Date): string {
@@ -65,21 +61,29 @@ export class WeeklyGoalComponent implements OnInit, OnDestroy {
   }
 
   achieved() {
-    this.growService.next();
-    this.animateHideDisplay();
-    this.resetGoal();
+    this.growService
+      .next()
+      .pipe(first(), takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.animateHideDisplay();
+        this.resetGoal();
+      });
   }
 
   async missed() {
-    this.growService.missed();
-    this.animateHideDisplay();
-    this.resetGoal();
+    this.growService
+      .missed()
+      .pipe(first(), takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.animateHideDisplay();
+        this.resetGoal();
+      });
   }
 
   private resetGoal() {
     setTimeout(async () => {
       await this.goalsService.reset();
-      await this.noticiationService.reset();
+      await this.notificationService.reset();
     }, 1000);
   }
 

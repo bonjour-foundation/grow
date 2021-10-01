@@ -21,7 +21,7 @@ export class FlowerComponent implements OnInit, OnDestroy {
   constructor(private growService: GrowService) {}
 
   ngOnInit() {
-    this.subscription = this.growService.watch().subscribe((grow: Grow) => {
+    this.subscription = this.growService.grow$.subscribe((grow: Grow) => {
       this.water = grow.water;
 
       setTimeout(
