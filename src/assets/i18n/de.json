@@ -35,9 +35,11 @@
   },
   "WEEKLY_GOAL": {
     "WEEKLY": "Dein Wochenziel",
-    "REMAINING": "Verbleibende Zeit: {{day}}",
+    "REMAINING": "Verbleibende Zeit:",
     "DAY": "Tag",
     "DAYS": "Tage",
+    "TODAY": "Heute",
+    "EXPIRED": "Abgelaufen",
     "ACHIEVED": "Ziel erreicht",
     "NOT_ACHIEVED": "Ziel nicht erreicht",
     "ADD_A_GOAL": "Wochenziel vornehmen",

@@ -7,7 +7,11 @@
     'GOALS.' + goal.category.toUpperCase() + '.' + goal.goal.toUpperCase() + '.TEASER' | translate
   }}</ion-badge>
 
-  <p>{{ 'WEEKLY_GOAL.REMAINING' | translate: {day: goal.expire_in} }}</p>
+  <!-- Ugly code but ngx-translate is not always initialized, do not fire when initialized and do not expose a function to check if initialized -->
+  <p *ngIf="goal.expire_in > 1">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ goal.expire_in }} {{ 'WEEKLY_GOAL.DAYS' | translate }}</p>
+  <p *ngIf="goal.expire_in === 1">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ goal.expire_in }} {{ 'WEEKLY_GOAL.DAY' | translate }}</p>
+  <p *ngIf="goal.expire_in === 0">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ 'WEEKLY_GOAL.TODAY' | translate }}</p>
+  <p *ngIf="goal.expire_in < 0">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ 'WEEKLY_GOAL.EXPIRED' | translate }}</p>
 
   <div class="actions ion-padding">
     <ion-button mode="ios" shape="round" color="primary" expand="block" (click)="achieved()">{{ 'WEEKLY_GOAL.ACHIEVED' | translate }}</ion-button>

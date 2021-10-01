@@ -11,7 +11,7 @@ import {GrowService} from '../../services/grow/grow.service';
 import {NotificationService} from '../../services/notification/notification.service';
 
 interface PopulateGoal extends Goal {
-  expire_in: string;
+  expire_in: number | undefined;
 }
 
 @Component({
@@ -26,7 +26,7 @@ export class WeeklyGoalComponent implements OnDestroy {
 
   goal$: Observable<PopulateGoal | undefined> = this.goalsService.goal$.pipe(
     map((goal: Goal | undefined) =>
-      goal !== undefined
+        goal !== undefined
         ? {
             ...goal,
             expire_in: this.expire(goal.expire_at),
@@ -49,15 +49,12 @@ export class WeeklyGoalComponent implements OnDestroy {
     this.destroy$.complete();
   }
 
-  private expire(input: Date): string {
+  private expire(input: Date | undefined): number | undefined {
     if (!input) {
-      return 'WEEKLY_GOAL.DAYS';
+      return undefined;
     }
 
-    const diff: number = differenceInDays(input, new Date());
-    const label: string = this.translateService.instant(diff > 1 ? 'WEEKLY_GOAL.DAYS' : 'WEEKLY_GOAL.DAY');
-
-    return `${diff} ${label}`;
+    return differenceInDays(input, new Date());
   }
 
   achieved() {
