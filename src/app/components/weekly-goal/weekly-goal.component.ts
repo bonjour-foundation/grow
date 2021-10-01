@@ -55,6 +55,15 @@ export class WeeklyGoalComponent implements OnDestroy {
     }
 
     const diff: number = differenceInDays(input, new Date());
+
+    if (diff === 0) {
+      return this.translateService.instant('WEEKLY_GOAL.TODAY');
+    }
+
+    if (diff < 0) {
+      return this.translateService.instant('WEEKLY_GOAL.EXPIRED');
+    }
+
     const label: string = this.translateService.instant(diff > 1 ? 'WEEKLY_GOAL.DAYS' : 'WEEKLY_GOAL.DAY');
 
     return `${diff} ${label}`;

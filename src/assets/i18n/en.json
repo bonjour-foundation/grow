@@ -38,6 +38,8 @@
     "REMAINING": "Time remaining: {{day}}",
     "DAY": "Day",
     "DAYS": "Days",
+    "TODAY": "Today",
+    "EXPIRED": "Expired",
     "ACHIEVED": "Accomplished",
     "NOT_ACHIEVED": "Not accomplished",
     "ADD_A_GOAL": "Set a weekly goal",
