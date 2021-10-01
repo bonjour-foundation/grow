@@ -90,7 +90,7 @@ div.info {
     height: 100px;
     overflow: hidden;
 
-    transform: scale(0.7);
+    transform: scale(0.7) translate3d(0, 2px, 0);
 
     &:after {
       content: "";
