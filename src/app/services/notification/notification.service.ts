@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 
+import {Platform} from '@ionic/angular';
+
 import {TranslateService} from '@ngx-translate/core';
 
 import {addDays} from 'date-fns';
@@ -10,9 +12,14 @@ import {PendingResult, LocalNotifications} from '@capacitor/local-notifications'
   providedIn: 'root',
 })
 export class NotificationService {
-  constructor(private translateService: TranslateService) {}
+  constructor(private platform: Platform,
+              private translateService: TranslateService) {}
 
   async schedule() {
+    if (this.platform.is('ios') && this.platform.is('mobileweb')) {
+      return;
+    }
+
     await LocalNotifications.requestPermissions();
 
     const title: string = this.translateService.instant('NOTIFICATION.TITLE');
