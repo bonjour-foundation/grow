@@ -1,6 +1,6 @@
 {
-  "images" : [
-    {
+    "images" : [
+      {
       "size" : "20x20",
       "idiom" : "iphone",
       "filename" : "AppIcon-20x20@2x.png",
@@ -105,12 +105,12 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "AppIcon-512@2x.png",
+        "filename" : "AppIcon-512@2x.png",
       "scale" : "1x"
-    }
-  ],
-  "info" : {
+      }
+    ],
+    "info" : {
     "version" : 1,
     "author" : "xcode"
-  }
+    }
 }
