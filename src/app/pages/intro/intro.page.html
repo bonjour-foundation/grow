@@ -3,8 +3,8 @@
 </ion-header>
 
 <ion-content color="light">
-  <ion-slides #introSlider pager="false" [options]="sliderOptions" (ionSlideWillChange)="transition = true" (ionSlideDidChange)="updateAnimateLastSlide()">
-    <ion-slide class="ion-padding grow">
+  <swiper-container [modules]="swiperModules" #introSlider pager="false" effect="slide" (swiperslidechangetransitionstart)="transition = true" (swipertransitionend)="updateAnimateLastSlide()">
+    <swiper-slide class="ion-padding grow">
       <main>
         <img loading="lazy" class="grow-logo" src="./assets/img/logo/grow.svg" role="presentation" />
 
@@ -20,9 +20,9 @@
           <ion-label>{{ 'INTRO.SLIDE_1.BUTTON' | translate }}</ion-label>
         </ion-button>
       </div>
-    </ion-slide>
+    </swiper-slide>
 
-    <ion-slide class="ion-padding">
+    <swiper-slide class="ion-padding">
       <main>
         <h1 class="ion-text-center">{{ 'INTRO.SLIDE_2.TITLE' | translate }}</h1>
         <p class="ion-text-center">{{ 'INTRO.SLIDE_2.SUB_TITLE_1' | translate }}</p>
@@ -36,9 +36,9 @@
           <ion-label>{{ 'INTRO.SLIDE_2.BUTTON' | translate }}</ion-label>
         </ion-button>
       </div>
-    </ion-slide>
+    </swiper-slide>
 
-    <ion-slide class="ion-padding animated">
+    <swiper-slide class="ion-padding animated">
       <main>
         <h1 class="ion-text-center">{{ 'INTRO.SLIDE_3.TITLE' | translate }}</h1>
         <p class="ion-text-center">{{ 'INTRO.SLIDE_3.SUB_TITLE_1' | translate }}</p>
@@ -55,6 +55,6 @@
           <ion-label>{{ 'INTRO.SLIDE_3.BUTTON' | translate }}</ion-label>
         </ion-button>
       </div>
-    </ion-slide>
-  </ion-slides>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>

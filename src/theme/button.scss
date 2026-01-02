@@ -1,5 +1,7 @@
 ion-button {
-  height: 2.4em;
+  min-height: 4rem;
+  max-height: 4rem;
+  height: 4rem;
 
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
@@ -52,4 +54,10 @@ ion-fab-button {
   ion-icon {
     font-size: 42px;
   }
+}
+
+ion-back-button {
+  font-size: var(--text-font-size);
+  font-weight: var(--text-font-weight);
+  line-height: var(--text-line-height);
 }

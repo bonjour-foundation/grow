@@ -7,6 +7,10 @@ ion-header {
   }
 }
 
-.header-md:after {
-  background: none;
+.header-md {
+  box-shadow: none;
+
+  &:after {
+    background: none;
+  }
 }

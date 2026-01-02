@@ -1,16 +1,15 @@
-ion-slides {
+swiper-container {
   height: 100%;
 
-  ion-slide {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: flex-start;
-    align-items: center;
-
-    overflow: hidden;
-
+  swiper-slide {
     main {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      overflow: hidden;
+
       z-index: 2;
 
       h1 {
@@ -63,10 +62,10 @@ ion-slides {
     }
   }
 
-  ion-slide.grow {
+  swiper-slide.grow {
     main {
       h1 {
-        padding-top: 16px;
+        padding-top: 24px;
         font-size: 4rem;
       }
 
@@ -95,7 +94,7 @@ ion-slides {
     }
   }
 
-  ion-slide.animated {
+  swiper-slide.animated {
     img.grow {
       transition: opacity 0.75s ease-out;
       opacity: 0;
