@@ -1,7 +1,6 @@
 {
 	"appId": "help.bonjour.grow",
 	"appName": "Grow",
-	"bundledWebRuntime": false,
 	"webDir": "www",
 	"plugins": {
 		"SplashScreen": {
@@ -10,5 +9,9 @@
 			"androidScaleType": "CENTER_CROP"
 		}
 	},
-	"cordova": {}
+	"cordova": {},
+	"packageClassList": [
+		"LocalNotificationsPlugin",
+		"SplashScreenPlugin"
+	]
 }
