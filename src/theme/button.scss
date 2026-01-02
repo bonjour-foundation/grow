@@ -55,3 +55,9 @@ ion-fab-button {
     font-size: 42px;
   }
 }
+
+ion-back-button {
+  font-size: var(--text-font-size);
+  font-weight: var(--text-font-weight);
+  line-height: var(--text-line-height);
+}
