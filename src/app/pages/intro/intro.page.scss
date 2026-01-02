@@ -5,7 +5,6 @@ swiper-container {
     main {
       display: flex;
       flex-direction: column;
-
       justify-content: flex-start;
       align-items: center;
 
@@ -66,7 +65,7 @@ swiper-container {
   swiper-slide.grow {
     main {
       h1 {
-        padding-top: 16px;
+        padding-top: 24px;
         font-size: 4rem;
       }
 
