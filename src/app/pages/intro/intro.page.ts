@@ -1,8 +1,7 @@
-import {Component, ViewChild} from '@angular/core';
-import {IonSlides, NavController} from '@ionic/angular';
-
-import {SwiperOptions} from 'swiper';
-
+import {Component, ElementRef, ViewChild} from '@angular/core';
+import {NavController} from '@ionic/angular';
+import { IonicSlides } from '@ionic/angular';
+import Swiper from 'swiper';
 import {set} from 'idb-keyval';
 
 @Component({
@@ -12,12 +11,10 @@ import {set} from 'idb-keyval';
     standalone: false
 })
 export class IntroPage {
-  @ViewChild('introSlider', {static: true}) private slider: IonSlides;
+  @ViewChild('introSlider')
+  slider: ElementRef | undefined;
 
-  sliderOptions: SwiperOptions = {
-    effect: 'slide',
-    zoom: false,
-  };
+  swiperModules = [IonicSlides];
 
   lastSlide = false;
 
@@ -34,12 +31,12 @@ export class IntroPage {
     }
 
     try {
-      const end: boolean = await this.slider.isEnd();
+      const end = this.swiperInstance?.isEnd;
 
       if (end) {
         await this.navigate();
       } else {
-        await this.slider.slideNext();
+        await this.swiperInstance?.slideNext();
         await this.updateAnimateLastSlide();
       }
     } catch (err) {
@@ -54,7 +51,7 @@ export class IntroPage {
 
   async updateAnimateLastSlide() {
     try {
-      this.lastSlide = await this.slider.isEnd();
+      this.lastSlide = this.swiperInstance?.isEnd;
       this.animate();
     } catch (err) {
       // Do nothing
@@ -83,5 +80,9 @@ export class IntroPage {
         }, 1000);
       }, 1500);
     }, 250);
+  }
+
+  private get swiperInstance(): Swiper | undefined {
+    return this.slider?.nativeElement.swiper;
   }
 }

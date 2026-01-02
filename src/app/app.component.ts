@@ -1,14 +1,17 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {ToastController} from '@ionic/angular';
+import { register } from 'swiper/element/bundle';
 
-import {catchError, forkJoin, from, Observable, of, Subject, takeUntil} from 'rxjs';
+import {catchError, forkJoin, from, Observable, Subject, takeUntil} from 'rxjs';
 
 import {MsgService} from './services/msg/msg.service';
 import {GoalsService} from './services/goals/goals.service';
 import {GrowService} from './services/grow/grow.service';
 
 import {SplashScreen} from '@capacitor/splash-screen';
+
+register();
 
 @Component({
     selector: 'app-root',

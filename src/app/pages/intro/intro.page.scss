@@ -1,7 +1,7 @@
-ion-slides {
+swiper-container {
   height: 100%;
 
-  ion-slide {
+  swiper-slide {
     display: flex;
     flex-direction: column;
 
@@ -63,7 +63,7 @@ ion-slides {
     }
   }
 
-  ion-slide.grow {
+  swiper-slide.grow {
     main {
       h1 {
         padding-top: 16px;
@@ -95,7 +95,7 @@ ion-slides {
     }
   }
 
-  ion-slide.animated {
+  swiper-slide.animated {
     img.grow {
       transition: opacity 0.75s ease-out;
       opacity: 0;
