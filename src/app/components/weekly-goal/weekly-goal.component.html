@@ -1,29 +1,68 @@
-<ng-container *ngIf="(goal$ | async) as goal; else noGoal">
+<ng-container *ngIf="goal$ | async as goal; else noGoal">
   <ion-icon src="./assets/img/weekly-goal.svg" role="presentation"></ion-icon>
 
   <h2 class="ion-margin-bottom">{{ 'WEEKLY_GOAL.WEEKLY' | translate }}</h2>
 
-  <ion-badge color="{{ goal.category + '-light' }}" mode="ios" class="ion-margin">{{
-    'GOALS.' + goal.category.toUpperCase() + '.' + goal.goal.toUpperCase() + '.TEASER' | translate
-  }}</ion-badge>
+  <ion-badge
+    color="{{ goal.category + '-light' }}"
+    mode="ios"
+    class="ion-margin"
+    >{{
+      'GOALS.' +
+        goal.category.toUpperCase() +
+        '.' +
+        goal.goal.toUpperCase() +
+        '.TEASER' | translate
+    }}</ion-badge
+  >
 
   <!-- Ugly code but ngx-translate is not always initialized, do not fire when initialized and do not expose a function to check if initialized -->
-  <p *ngIf="goal.expire_in > 1">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ goal.expire_in }} {{ 'WEEKLY_GOAL.DAYS' | translate }}</p>
-  <p *ngIf="goal.expire_in === 1">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ goal.expire_in }} {{ 'WEEKLY_GOAL.DAY' | translate }}</p>
-  <p *ngIf="goal.expire_in === 0">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ 'WEEKLY_GOAL.TODAY' | translate }}</p>
-  <p *ngIf="goal.expire_in < 0">{{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ 'WEEKLY_GOAL.EXPIRED' | translate }}</p>
+  <p *ngIf="goal.expire_in > 1">
+    {{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ goal.expire_in }}
+    {{ 'WEEKLY_GOAL.DAYS' | translate }}
+  </p>
+  <p *ngIf="goal.expire_in === 1">
+    {{ 'WEEKLY_GOAL.REMAINING' | translate }} {{ goal.expire_in }}
+    {{ 'WEEKLY_GOAL.DAY' | translate }}
+  </p>
+  <p *ngIf="goal.expire_in === 0">
+    {{ 'WEEKLY_GOAL.REMAINING' | translate }}
+    {{ 'WEEKLY_GOAL.TODAY' | translate }}
+  </p>
+  <p *ngIf="goal.expire_in < 0">
+    {{ 'WEEKLY_GOAL.REMAINING' | translate }}
+    {{ 'WEEKLY_GOAL.EXPIRED' | translate }}
+  </p>
 
   <div class="actions ion-padding">
-    <ion-button mode="ios" shape="round" color="primary" expand="block" (click)="achieved()">{{ 'WEEKLY_GOAL.ACHIEVED' | translate }}</ion-button>
+    <ion-button
+      mode="ios"
+      shape="round"
+      color="primary"
+      expand="block"
+      (click)="achieved()"
+      >{{ 'WEEKLY_GOAL.ACHIEVED' | translate }}</ion-button
+    >
 
-    <button class="link" (click)="missed()">{{ 'WEEKLY_GOAL.NOT_ACHIEVED' | translate }}</button>
+    <button class="link" (click)="missed()">
+      {{ 'WEEKLY_GOAL.NOT_ACHIEVED' | translate }}
+    </button>
   </div>
 </ng-container>
 
 <ng-template #noGoal>
-  <p class="ion-text-center ion-padding no-goal-info">{{ 'WEEKLY_GOAL.INFO' | translate }}</p>
+  <p class="ion-text-center ion-padding no-goal-info">
+    {{ 'WEEKLY_GOAL.INFO' | translate }}
+  </p>
 
   <div class="no-goal-actions ion-padding">
-    <ion-button mode="ios" shape="round" color="primary" expand="block" [routerLink]="'/categories'">{{ 'WEEKLY_GOAL.ADD_A_GOAL' | translate }}</ion-button>
+    <ion-button
+      mode="ios"
+      shape="round"
+      color="primary"
+      expand="block"
+      [routerLink]="'/categories'"
+      >{{ 'WEEKLY_GOAL.ADD_A_GOAL' | translate }}</ion-button
+    >
   </div>
 </ng-template>

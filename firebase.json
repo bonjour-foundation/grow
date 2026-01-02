@@ -1,29 +1,32 @@
 {
   "hosting": {
     "public": "www",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
     ],
-    "headers": [{
-      "source" : "ngsw.json",
-      "headers" : [{
-        "key" : "Cache-Control",
-        "value" : "no-cache"
-      }]
-    },{
-      "source" : "/",
-      "headers" : [{
-        "key" : "Cache-Control",
-        "value" : "public,max-age=0,must-revalidate"
-      }]
-    }]
+    "headers": [
+      {
+        "source": "ngsw.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      }
+    ]
   }
 }

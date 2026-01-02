@@ -2,7 +2,11 @@
   <ion-header>
     <ion-toolbar color="light">
       <ion-buttons slot="start">
-        <ion-back-button [defaultHref]="'/goal/' + category" color="medium" [text]="'CORE.BACK' | translate"></ion-back-button>
+        <ion-back-button
+          [defaultHref]="'/goal/' + category"
+          color="medium"
+          [text]="'CORE.BACK' | translate"
+        ></ion-back-button>
       </ion-buttons>
 
       <ion-title></ion-title>
@@ -17,7 +21,10 @@
       ></app-goal-title>
 
       <section class="goal ion-padding-top ion-padding-bottom">
-        <ion-icon [src]="'./assets/img/goals/' + category + '/' + goal + '.svg'" role="presentation"></ion-icon>
+        <ion-icon
+          [src]="'./assets/img/goals/' + category + '/' + goal + '.svg'"
+          role="presentation"
+        ></ion-icon>
 
         <p
           class="ion-text-center ion-margin-start ion-margin-top ion-margin-end"
@@ -25,8 +32,17 @@
         ></p>
       </section>
 
-      <section class="save ion-padding-top ion-padding-bottom ion-margin-bottom">
-        <ion-button mode="ios" shape="round" expand="block" [color]="category + '-light'" (click)="save()" [className]="category">
+      <section
+        class="save ion-padding-top ion-padding-bottom ion-margin-bottom"
+      >
+        <ion-button
+          mode="ios"
+          shape="round"
+          expand="block"
+          [color]="category + '-light'"
+          (click)="save()"
+          [className]="category"
+        >
           {{ 'GOAL_SELECTION.SAVE' | translate }}
         </ion-button>
       </section>

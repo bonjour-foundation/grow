@@ -1,7 +1,7 @@
 /// <reference types="@capacitor/local-notifications" />
 /// <reference types="@capacitor/splash-screen" />
 
-import {CapacitorConfig} from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'help.bonjour.grow',

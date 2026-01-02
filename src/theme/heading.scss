@@ -16,7 +16,8 @@ h2 {
   font-weight: var(--heading-small-font-weight);
 }
 
-p, a {
+p,
+a {
   font-size: var(--lead-font-size);
   line-height: var(--lead-line-height);
   font-weight: var(--lead-font-weight);
@@ -25,7 +26,8 @@ p, a {
 a {
   color: var(--ion-color-medium);
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     color: var(--ion-color-primary);
   }
 }

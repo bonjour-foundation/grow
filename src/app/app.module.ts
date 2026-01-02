@@ -1,30 +1,42 @@
-import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {RouteReuseStrategy} from '@angular/router';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouteReuseStrategy } from '@angular/router';
 
-import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
-import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
-import {TranslateModule} from '@ngx-translate/core';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import {provideTranslateHttpLoader} from '@ngx-translate/http-loader';
-import {ServiceWorkerModule} from '@angular/service-worker';
-import {environment} from '../environments/environment';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { environment } from '../environments/environment';
 
 @NgModule({
-    declarations: [AppComponent],
-    bootstrap: [AppComponent],
-    imports: [
-      BrowserModule,
-      IonicModule.forRoot(),
-      AppRoutingModule,
-      TranslateModule.forRoot({
-          loader: provideTranslateHttpLoader({ prefix: './assets/i18n/', suffix: '.json' }),
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      loader: provideTranslateHttpLoader({
+        prefix: './assets/i18n/',
+        suffix: '.json',
       }),
-      ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
-    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, provideHttpClient(withInterceptorsFromDi())],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
-},)
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
+  ],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
 export class AppModule {}

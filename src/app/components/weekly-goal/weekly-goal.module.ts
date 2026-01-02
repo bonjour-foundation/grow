@@ -1,14 +1,19 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
-import {WeeklyGoalComponent} from './weekly-goal.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { WeeklyGoalComponent } from './weekly-goal.component';
 
 @NgModule({
-  imports: [IonicModule, CommonModule, TranslateModule.forChild(), RouterModule],
+  imports: [
+    IonicModule,
+    CommonModule,
+    TranslateModule.forChild(),
+    RouterModule,
+  ],
   declarations: [WeeklyGoalComponent],
   exports: [WeeklyGoalComponent],
 })

@@ -1,17 +1,17 @@
-import {Component} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import {NavController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
-import {GoalsService} from '../../../../services/goals/goals.service';
-import {MsgService} from '../../../../services/msg/msg.service';
-import {NotificationService} from '../../../../services/notification/notification.service';
+import { GoalsService } from '../../../../services/goals/goals.service';
+import { MsgService } from '../../../../services/msg/msg.service';
+import { NotificationService } from '../../../../services/notification/notification.service';
 
 @Component({
-    selector: 'app-detail',
-    templateUrl: './detail.page.html',
-    styleUrls: ['./detail.page.scss'],
-    standalone: false
+  selector: 'app-detail',
+  templateUrl: './detail.page.html',
+  styleUrls: ['./detail.page.scss'],
+  standalone: false,
 })
 export class DetailPage {
   category: string;
@@ -23,7 +23,7 @@ export class DetailPage {
     private navController: NavController,
     private goalsService: GoalsService,
     private notificationService: NotificationService,
-    private msgService: MsgService
+    private msgService: MsgService,
   ) {}
 
   ionViewWillEnter() {
@@ -43,7 +43,7 @@ export class DetailPage {
 
       await this.notificationService.schedule();
 
-      await this.navController.navigateRoot(['/home'], {animated: true});
+      await this.navController.navigateRoot(['/home'], { animated: true });
     } catch (err) {
       this.msgService.error('ERROR.GOAL_NOT_ADDED');
     }

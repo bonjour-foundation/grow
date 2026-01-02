@@ -1,24 +1,24 @@
-import {Component, HostBinding, Input, OnDestroy} from '@angular/core';
+import { Component, HostBinding, Input, OnDestroy } from '@angular/core';
 
-import {first, map, Observable, Subject, takeUntil} from 'rxjs';
+import { first, map, Observable, Subject, takeUntil } from 'rxjs';
 
-import {differenceInDays} from 'date-fns';
+import { differenceInDays } from 'date-fns';
 
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
-import {GoalsService} from '../../services/goals/goals.service';
-import {GrowService} from '../../services/grow/grow.service';
-import {NotificationService} from '../../services/notification/notification.service';
+import { GoalsService } from '../../services/goals/goals.service';
+import { GrowService } from '../../services/grow/grow.service';
+import { NotificationService } from '../../services/notification/notification.service';
 
 interface PopulateGoal extends Goal {
   expire_in: number | undefined;
 }
 
 @Component({
-    selector: 'app-weekly-goal',
-    templateUrl: './weekly-goal.component.html',
-    styleUrls: ['./weekly-goal.component.scss'],
-    standalone: false
+  selector: 'app-weekly-goal',
+  templateUrl: './weekly-goal.component.html',
+  styleUrls: ['./weekly-goal.component.scss'],
+  standalone: false,
 })
 export class WeeklyGoalComponent implements OnDestroy {
   @HostBinding('class.display')
@@ -27,13 +27,13 @@ export class WeeklyGoalComponent implements OnDestroy {
 
   goal$: Observable<PopulateGoal | undefined> = this.goalsService.goal$.pipe(
     map((goal: Goal | undefined) =>
-        goal !== undefined
+      goal !== undefined
         ? {
             ...goal,
             expire_in: this.expire(goal.expire_at),
           }
-        : undefined
-    )
+        : undefined,
+    ),
   );
 
   private destroy$: Subject<void> = new Subject<void>();
@@ -42,7 +42,7 @@ export class WeeklyGoalComponent implements OnDestroy {
     private translateService: TranslateService,
     private goalsService: GoalsService,
     private notificationService: NotificationService,
-    private growService: GrowService
+    private growService: GrowService,
   ) {}
 
   ngOnDestroy() {
