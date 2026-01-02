@@ -1,5 +1,7 @@
 {
   "name": "grow",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
