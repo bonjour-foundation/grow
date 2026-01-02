@@ -6,7 +6,6 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'help.bonjour.grow',
   appName: 'Grow',
-  bundledWebRuntime: false,
   webDir: 'www',
   plugins: {
     SplashScreen: {
