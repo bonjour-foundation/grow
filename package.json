@@ -10,7 +10,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "format": "prettier --write './**/*.{ts,js,mjs,json,scss,css,html,md}'"
   },
   "private": true,
   "dependencies": {
@@ -68,6 +69,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "~5.9.0"
   }
 }
