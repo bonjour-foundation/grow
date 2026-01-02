@@ -13,6 +13,13 @@ const config: CapacitorConfig = {
       backgroundColor: '#fbf8f3',
       androidScaleType: 'CENTER_CROP',
     },
+    StatusBar: {
+      overlaysWebView: false,
+      style: 'LIGHT',
+      // Waiting on bug fix for issue to be merged:
+      // https://github.com/ionic-team/capacitor-plugins/issues/2341
+      // backgroundColor: '#fbf8f3',
+    },
   },
   cordova: {},
 };
