@@ -4,9 +4,10 @@ import {Subscription} from 'rxjs';
 import {Grow, GrowService} from '../../services/grow/grow.service';
 
 @Component({
-  selector: 'app-flower',
-  templateUrl: './flower.component.html',
-  styleUrls: ['./flower.component.scss'],
+    selector: 'app-flower',
+    templateUrl: './flower.component.html',
+    styleUrls: ['./flower.component.scss'],
+    standalone: false
 })
 export class FlowerComponent implements OnInit, OnDestroy {
   grow: number;

@@ -15,9 +15,10 @@ interface PopulateGoal extends Goal {
 }
 
 @Component({
-  selector: 'app-weekly-goal',
-  templateUrl: './weekly-goal.component.html',
-  styleUrls: ['./weekly-goal.component.scss'],
+    selector: 'app-weekly-goal',
+    templateUrl: './weekly-goal.component.html',
+    styleUrls: ['./weekly-goal.component.scss'],
+    standalone: false
 })
 export class WeeklyGoalComponent implements OnDestroy {
   @HostBinding('class.display')

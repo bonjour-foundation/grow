@@ -8,9 +8,10 @@ import {MsgService} from '../../../../services/msg/msg.service';
 import {NotificationService} from '../../../../services/notification/notification.service';
 
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.page.html',
-  styleUrls: ['./detail.page.scss'],
+    selector: 'app-detail',
+    templateUrl: './detail.page.html',
+    styleUrls: ['./detail.page.scss'],
+    standalone: false
 })
 export class DetailPage {
   category: string;

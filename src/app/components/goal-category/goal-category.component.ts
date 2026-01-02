@@ -3,9 +3,10 @@ import {Router} from '@angular/router';
 import {NavController} from '@ionic/angular';
 
 @Component({
-  selector: 'app-goal-category',
-  templateUrl: './goal-category.component.html',
-  styleUrls: ['./goal-category.component.scss'],
+    selector: 'app-goal-category',
+    templateUrl: './goal-category.component.html',
+    styleUrls: ['./goal-category.component.scss'],
+    standalone: false
 })
 export class GoalCategoryComponent {
   @Input()
