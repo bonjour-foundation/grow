@@ -26,17 +26,13 @@ export class IntroPage {
   constructor(private navController: NavController) {}
 
   async next() {
-    if (!this.slider) {
-      return;
-    }
-
     try {
       const end = this.swiperInstance?.isEnd;
 
       if (end) {
         await this.navigate();
       } else {
-        await this.swiperInstance?.slideNext();
+        this.swiperInstance?.slideNext();
         await this.updateAnimateLastSlide();
       }
     } catch (err) {

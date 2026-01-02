@@ -3,7 +3,7 @@
 </ion-header>
 
 <ion-content color="light">
-  <swiper-container [modules]="swiperModules" #introSlider pager="false" effect="slide" (swiperslidechangetransitionstart)="transition = true" (swiperslidechange)="updateAnimateLastSlide()">
+  <swiper-container [modules]="swiperModules" #introSlider pager="false" effect="slide" (swiperslidechangetransitionstart)="transition = true" (swipertransitionend)="updateAnimateLastSlide()">
     <swiper-slide class="ion-padding grow">
       <main>
         <img loading="lazy" class="grow-logo" src="./assets/img/logo/grow.svg" role="presentation" />
