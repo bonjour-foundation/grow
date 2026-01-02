@@ -2,15 +2,15 @@ swiper-container {
   height: 100%;
 
   swiper-slide {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: flex-start;
-    align-items: center;
-
-    overflow: hidden;
-
     main {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: flex-start;
+      align-items: center;
+
+      overflow: hidden;
+
       z-index: 2;
 
       h1 {
