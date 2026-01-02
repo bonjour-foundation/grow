@@ -1,8 +1,17 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {first, from, map, Observable, of, ReplaySubject, switchMap, tap} from 'rxjs';
+import {
+  first,
+  from,
+  map,
+  Observable,
+  of,
+  ReplaySubject,
+  switchMap,
+  tap,
+} from 'rxjs';
 
-import {get, set} from 'idb-keyval';
+import { get, set } from 'idb-keyval';
 
 export interface Grow {
   water: boolean;
@@ -24,9 +33,9 @@ export class GrowService {
           water: false,
           level: level !== undefined ? level : 1,
           msg: false,
-        })
+        }),
       ),
-      switchMap(() => of(void 0))
+      switchMap(() => of(void 0)),
     );
   }
 
@@ -66,15 +75,17 @@ export class GrowService {
           return nextLevel;
         }
       }),
-      switchMap((nextLevel: number) => from(this.save(nextLevel)).pipe(switchMap(() => of(nextLevel)))),
+      switchMap((nextLevel: number) =>
+        from(this.save(nextLevel)).pipe(switchMap(() => of(nextLevel))),
+      ),
       tap((nextLevel: number) =>
         this.growSubject.next({
           water: inc,
           level: nextLevel,
           msg: true,
-        })
+        }),
       ),
-      switchMap(() => of(void 0))
+      switchMap(() => of(void 0)),
     );
   }
 

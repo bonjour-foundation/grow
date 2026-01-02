@@ -298,7 +298,9 @@
   --ion-color-base: var(--ion-color-background-flower-bottom);
   --ion-color-base-rgb: var(--ion-color-background-flower-bottom-rgb);
   --ion-color-contrast: var(--ion-color-background-flower-bottom-contrast);
-  --ion-color-contrast-rgb: var(--ion-color-background-flower-bottom-contrast-rgb);
+  --ion-color-contrast-rgb: var(
+    --ion-color-background-flower-bottom-contrast-rgb
+  );
   --ion-color-shade: var(--ion-color-background-flower-bottom-shade);
   --ion-color-tint: var(--ion-color-background-flower-bottom-tint);
 }

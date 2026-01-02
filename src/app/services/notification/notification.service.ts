@@ -1,19 +1,24 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {Platform} from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 
-import {TranslateService} from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
-import {addDays} from 'date-fns';
+import { addDays } from 'date-fns';
 
-import {PendingResult, LocalNotifications} from '@capacitor/local-notifications';
+import {
+  LocalNotifications,
+  PendingResult,
+} from '@capacitor/local-notifications';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotificationService {
-  constructor(private platform: Platform,
-              private translateService: TranslateService) {}
+  constructor(
+    private platform: Platform,
+    private translateService: TranslateService,
+  ) {}
 
   async schedule() {
     if (this.platform.is('ios') && this.platform.is('mobileweb')) {
@@ -33,7 +38,7 @@ export class NotificationService {
           title,
           body,
           id: 1,
-          schedule: {at: when},
+          schedule: { at: when },
         },
       ],
     });
@@ -42,7 +47,11 @@ export class NotificationService {
   async reset() {
     const pending: PendingResult = await LocalNotifications.getPending();
 
-    if (!pending || !pending.notifications || pending.notifications.length <= 0) {
+    if (
+      !pending ||
+      !pending.notifications ||
+      pending.notifications.length <= 0
+    ) {
       return;
     }
 

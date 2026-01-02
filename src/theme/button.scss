@@ -36,7 +36,7 @@ button.link {
   position: relative;
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 16px;
     left: 0;
@@ -49,7 +49,10 @@ ion-fab-button {
   height: 74px;
   width: 74px;
 
-  --box-shadow: 0 3px 5px -1px rgba(181, 162, 131, 0.2), 0 6px 10px 0 rgba(181, 162, 131, 0.14), 0 1px 18px 0 rgba(181, 162, 131, 0.12);
+  --box-shadow:
+    0 3px 5px -1px rgba(181, 162, 131, 0.2),
+    0 6px 10px 0 rgba(181, 162, 131, 0.14),
+    0 1px 18px 0 rgba(181, 162, 131, 0.12);
 
   ion-icon {
     font-size: 42px;

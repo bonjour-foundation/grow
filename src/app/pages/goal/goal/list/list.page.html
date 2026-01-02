@@ -2,7 +2,11 @@
   <ion-header>
     <ion-toolbar color="light">
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="/categories" color="medium" [text]="'CORE.BACK' | translate"></ion-back-button>
+        <ion-back-button
+          defaultHref="/categories"
+          color="medium"
+          [text]="'CORE.BACK' | translate"
+        ></ion-back-button>
       </ion-buttons>
 
       <ion-title></ion-title>
@@ -18,7 +22,10 @@
       ></app-goal-title>
     </ng-container>
 
-    <section class="actions ion-margin-top ion-margin-bottom" *ngIf="(goals$ | async) as goals">
+    <section
+      class="actions ion-margin-top ion-margin-bottom"
+      *ngIf="(goals$ | async) as goals"
+    >
       <ion-button
         mode="ios"
         shape="round"
@@ -28,7 +35,8 @@
         [className]="category"
         (click)="select(goal)"
       >
-        {{ 'GOALS.' + category.toUpperCase() + '.' + goal.toUpperCase() + '.TEASER' | translate }}
+        {{ 'GOALS.' + category.toUpperCase() + '.' + goal.toUpperCase() +
+        '.TEASER' | translate }}
       </ion-button>
     </section>
   </main>

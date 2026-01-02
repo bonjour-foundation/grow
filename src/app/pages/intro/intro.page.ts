@@ -1,14 +1,13 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {NavController} from '@ionic/angular';
-import { IonicSlides } from '@ionic/angular';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { IonicSlides, NavController } from '@ionic/angular';
+import { set } from 'idb-keyval';
 import Swiper from 'swiper';
-import {set} from 'idb-keyval';
 
 @Component({
-    selector: 'app-intro',
-    templateUrl: './intro.page.html',
-    styleUrls: ['./intro.page.scss'],
-    standalone: false
+  selector: 'app-intro',
+  templateUrl: './intro.page.html',
+  styleUrls: ['./intro.page.scss'],
+  standalone: false,
 })
 export class IntroPage {
   @ViewChild('introSlider')
@@ -42,7 +41,7 @@ export class IntroPage {
 
   private async navigate() {
     await set('intro_done', true);
-    await this.navController.navigateRoot('/categories', {animated: true});
+    await this.navController.navigateRoot('/categories', { animated: true });
   }
 
   async updateAnimateLastSlide() {

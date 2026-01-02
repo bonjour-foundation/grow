@@ -1,10 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
-import {GoalTitleComponent} from './goal-title.component';
+import { GoalTitleComponent } from './goal-title.component';
 
 @NgModule({
   imports: [IonicModule, CommonModule, TranslateModule.forChild()],

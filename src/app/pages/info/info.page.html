@@ -2,7 +2,11 @@
   <ion-header>
     <ion-toolbar color="light">
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="/home" color="medium" [text]="'CORE.BACK' | translate"></ion-back-button>
+        <ion-back-button
+          defaultHref="/home"
+          color="medium"
+          [text]="'CORE.BACK' | translate"
+        ></ion-back-button>
       </ion-buttons>
 
       <ion-title></ion-title>
@@ -11,13 +15,23 @@
 
   <main class="ion-padding">
     <section>
-      <img loading="lazy" class="grow-logo" src="./assets/img/logo/grow.svg" role="presentation" />
+      <img
+        loading="lazy"
+        class="grow-logo"
+        src="./assets/img/logo/grow.svg"
+        role="presentation"
+      />
 
       <p class="ion-text-center">{{ 'INFO.OPEN_SOURCE' | translate }}</p>
 
-      <a href="https://bonjour.help/grow/" rel="noopener norefferer" class="grow-link">{{ 'INFO.MORE' | translate }}</a>
+      <a
+        href="https://bonjour.help/grow/"
+        rel="noopener norefferer"
+        class="grow-link"
+        >{{ 'INFO.MORE' | translate }}</a
+      >
 
-      <hr/>
+      <hr />
     </section>
 
     <section>
@@ -25,21 +39,37 @@
 
       <a href="mailto:co-create@bonjour.help">co-create&#64;bonjour.help</a>
 
-      <hr/>
+      <hr />
     </section>
 
     <section>
-      <ion-icon name="logo-github" role="presentation" lazy="true" class="github-logo"></ion-icon>
+      <ion-icon
+        name="logo-github"
+        role="presentation"
+        lazy="true"
+        class="github-logo"
+      ></ion-icon>
 
-      <a href="https://github.com/bonjour-foundation/grow" rel="noopener norefferer">{{ 'INFO.CO_CREATE' | translate }}</a>
+      <a
+        href="https://github.com/bonjour-foundation/grow"
+        rel="noopener norefferer"
+        >{{ 'INFO.CO_CREATE' | translate }}</a
+      >
 
-      <hr/>
+      <hr />
     </section>
 
     <section>
-      <img loading="lazy" class="social-logo" src="./assets/img/logo/social_software.svg" role="presentation" />
+      <img
+        loading="lazy"
+        class="social-logo"
+        src="./assets/img/logo/social_software.svg"
+        role="presentation"
+      />
 
-      <p class="ion-text-center making">{{ 'INFO.IN_THE_MAKING' | translate }}</p>
+      <p class="ion-text-center making">
+        {{ 'INFO.IN_THE_MAKING' | translate }}
+      </p>
 
       <p class="ion-text-center">{{ 'INFO.FOUNDATION' | translate }}</p>
     </section>

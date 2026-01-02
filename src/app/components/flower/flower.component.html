@@ -1,17 +1,63 @@
 <section class="flower">
-  <img loading="lazy" class="grow" src="./assets/img/flower/grow_1.svg" role="presentation" [class.display]="grow === 1" />
-  <img loading="lazy" class="grow" src="./assets/img/flower/grow_2.svg" role="presentation" [class.display]="grow === 2" />
-  <img loading="lazy" class="grow" src="./assets/img/flower/grow_3.svg" role="presentation" [class.display]="grow === 3" />
-  <img loading="lazy" class="grow" src="./assets/img/flower/grow_4.svg" role="presentation" [class.display]="grow === 4" />
-  <img loading="lazy" class="grow" src="./assets/img/flower/grow_5.svg" role="presentation" [class.display]="grow === 5" />
-  <img loading="lazy" class="grow" src="./assets/img/flower/grow_6.svg" role="presentation" [class.display]="grow === 6" />
+  <img
+    loading="lazy"
+    class="grow"
+    src="./assets/img/flower/grow_1.svg"
+    role="presentation"
+    [class.display]="grow === 1"
+  />
+  <img
+    loading="lazy"
+    class="grow"
+    src="./assets/img/flower/grow_2.svg"
+    role="presentation"
+    [class.display]="grow === 2"
+  />
+  <img
+    loading="lazy"
+    class="grow"
+    src="./assets/img/flower/grow_3.svg"
+    role="presentation"
+    [class.display]="grow === 3"
+  />
+  <img
+    loading="lazy"
+    class="grow"
+    src="./assets/img/flower/grow_4.svg"
+    role="presentation"
+    [class.display]="grow === 4"
+  />
+  <img
+    loading="lazy"
+    class="grow"
+    src="./assets/img/flower/grow_5.svg"
+    role="presentation"
+    [class.display]="grow === 5"
+  />
+  <img
+    loading="lazy"
+    class="grow"
+    src="./assets/img/flower/grow_6.svg"
+    role="presentation"
+    [class.display]="grow === 6"
+  />
 
-  <img loading="lazy" class="water" src="./assets/img/flower/watering-can.svg" role="presentation" [class.display]="water" />
+  <img
+    loading="lazy"
+    class="water"
+    src="./assets/img/flower/watering-can.svg"
+    role="presentation"
+    [class.display]="water"
+  />
 
   <div class="info ion-text-center" [class.display]="info">
     <div class="triangle"></div>
-    <h1 *ngIf="msg === 'achieved'">{{ 'WEEKLY_GOAL.GOAL_ACHIEVED' | translate }}</h1>
-    <h1 *ngIf="msg === 'missed'">{{ 'WEEKLY_GOAL.GOAL_MISSED' | translate }}</h1>
+    <h1 *ngIf="msg === 'achieved'">
+      {{ 'WEEKLY_GOAL.GOAL_ACHIEVED' | translate }}
+    </h1>
+    <h1 *ngIf="msg === 'missed'">
+      {{ 'WEEKLY_GOAL.GOAL_MISSED' | translate }}
+    </h1>
   </div>
 </section>
 

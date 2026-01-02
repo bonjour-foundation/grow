@@ -1,14 +1,19 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
-import {RouterModule} from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
-import {OpenInfoComponent} from './open-info.component';
+import { OpenInfoComponent } from './open-info.component';
 
 @NgModule({
-  imports: [IonicModule, RouterModule, CommonModule, TranslateModule.forChild()],
+  imports: [
+    IonicModule,
+    RouterModule,
+    CommonModule,
+    TranslateModule.forChild(),
+  ],
   declarations: [OpenInfoComponent],
   exports: [OpenInfoComponent],
 })

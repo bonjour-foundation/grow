@@ -1,13 +1,13 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {Subscription} from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 
-import {Grow, GrowService} from '../../services/grow/grow.service';
+import { Grow, GrowService } from '../../services/grow/grow.service';
 
 @Component({
-    selector: 'app-flower',
-    templateUrl: './flower.component.html',
-    styleUrls: ['./flower.component.scss'],
-    standalone: false
+  selector: 'app-flower',
+  templateUrl: './flower.component.html',
+  styleUrls: ['./flower.component.scss'],
+  standalone: false,
 })
 export class FlowerComponent implements OnInit, OnDestroy {
   grow: number;
@@ -30,7 +30,7 @@ export class FlowerComponent implements OnInit, OnDestroy {
           this.info = grow.msg;
           this.msg = grow.water ? 'achieved' : 'missed';
         },
-        grow.water ? 250 : 500
+        grow.water ? 250 : 500,
       );
 
       setTimeout(
@@ -40,7 +40,7 @@ export class FlowerComponent implements OnInit, OnDestroy {
 
           this.info = false;
         },
-        this.grow === undefined ? 150 : 5000
+        this.grow === undefined ? 150 : 5000,
       );
     });
   }

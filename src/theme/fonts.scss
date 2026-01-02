@@ -1,59 +1,92 @@
 /* nunito-sans-regular - latin */
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 400;
-  src: url("/assets/fonts/nunito-sans-v4-latin-regular.eot"); /* IE9 Compat Modes */
-  src: local("Nunito Sans Regular"), local("NunitoSans-Regular"), url("/assets/fonts/nunito-sans-v4-latin-regular.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-regular.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-regular.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-regular.svg#NunitoSans") format("svg"); /* Legacy iOS */
+  src: url('/assets/fonts/nunito-sans-v4-latin-regular.eot'); /* IE9 Compat Modes */
+  src:
+    local('Nunito Sans Regular'),
+    local('NunitoSans-Regular'),
+    url('/assets/fonts/nunito-sans-v4-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/assets/fonts/nunito-sans-v4-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/assets/fonts/nunito-sans-v4-latin-regular.woff') format('woff'),
+    /* Modern Browsers */ url('/assets/fonts/nunito-sans-v4-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/assets/fonts/nunito-sans-v4-latin-regular.svg#NunitoSans')
+      format('svg'); /* Legacy iOS */
 }
 
 /* nunito-sans-700 - latin */
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 700;
-  src: url("/assets/fonts/nunito-sans-v4-latin-700.eot"); /* IE9 Compat Modes */
-  src: local("Nunito Sans Bold"), local("NunitoSans-Bold"), url("/assets/fonts/nunito-sans-v4-latin-700.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-700.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-700.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-700.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-700.svg#NunitoSans") format("svg"); /* Legacy iOS */
+  src: url('/assets/fonts/nunito-sans-v4-latin-700.eot'); /* IE9 Compat Modes */
+  src:
+    local('Nunito Sans Bold'),
+    local('NunitoSans-Bold'),
+    url('/assets/fonts/nunito-sans-v4-latin-700.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/assets/fonts/nunito-sans-v4-latin-700.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/assets/fonts/nunito-sans-v4-latin-700.woff') format('woff'),
+    /* Modern Browsers */ url('/assets/fonts/nunito-sans-v4-latin-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/assets/fonts/nunito-sans-v4-latin-700.svg#NunitoSans') format('svg'); /* Legacy iOS */
 }
 
 /* nunito-sans-800 - latin */
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 800;
-  src: url("/assets/fonts/nunito-sans-v4-latin-800.eot"); /* IE9 Compat Modes */
-  src: local("Nunito Sans ExtraBold"), local("NunitoSans-ExtraBold"), url("/assets/fonts/nunito-sans-v4-latin-800.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-800.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-800.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-800.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-800.svg#NunitoSans") format("svg"); /* Legacy iOS */
+  src: url('/assets/fonts/nunito-sans-v4-latin-800.eot'); /* IE9 Compat Modes */
+  src:
+    local('Nunito Sans ExtraBold'),
+    local('NunitoSans-ExtraBold'),
+    url('/assets/fonts/nunito-sans-v4-latin-800.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/assets/fonts/nunito-sans-v4-latin-800.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/assets/fonts/nunito-sans-v4-latin-800.woff') format('woff'),
+    /* Modern Browsers */ url('/assets/fonts/nunito-sans-v4-latin-800.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/assets/fonts/nunito-sans-v4-latin-800.svg#NunitoSans') format('svg'); /* Legacy iOS */
 }
 
 /* nunito-sans-900 - latin */
 @font-face {
-  font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
   font-style: normal;
   font-weight: 900;
-  src: url("/assets/fonts/nunito-sans-v4-latin-900.eot"); /* IE9 Compat Modes */
-  src: local("Nunito Sans Black"), local("NunitoSans-Black"), url("/assets/fonts/nunito-sans-v4-latin-900.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/assets/fonts/nunito-sans-v4-latin-900.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-900.woff") format("woff"),
-    /* Modern Browsers */ url("/assets/fonts/nunito-sans-v4-latin-900.ttf") format("truetype"),
-    /* Safari, Android, iOS */ url("/assets/fonts/nunito-sans-v4-latin-900.svg#NunitoSans") format("svg"); /* Legacy iOS */
+  src: url('/assets/fonts/nunito-sans-v4-latin-900.eot'); /* IE9 Compat Modes */
+  src:
+    local('Nunito Sans Black'),
+    local('NunitoSans-Black'),
+    url('/assets/fonts/nunito-sans-v4-latin-900.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/assets/fonts/nunito-sans-v4-latin-900.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */
+      url('/assets/fonts/nunito-sans-v4-latin-900.woff') format('woff'),
+    /* Modern Browsers */ url('/assets/fonts/nunito-sans-v4-latin-900.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/assets/fonts/nunito-sans-v4-latin-900.svg#NunitoSans') format('svg'); /* Legacy iOS */
 }
 
 * {
   // Fonts
-  font-family: "Nunito Sans";
-  --ion-font-family: "Nunito Sans";
+  font-family: 'Nunito Sans';
+  --ion-font-family: 'Nunito Sans';
 }
 
 :root {

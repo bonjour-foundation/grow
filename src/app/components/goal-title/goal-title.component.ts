@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-goal-title',
-    templateUrl: './goal-title.component.html',
-    styleUrls: ['./goal-title.component.scss'],
-    standalone: false
+  selector: 'app-goal-title',
+  templateUrl: './goal-title.component.html',
+  styleUrls: ['./goal-title.component.scss'],
+  standalone: false,
 })
 export class GoalTitleComponent {
   @Input()

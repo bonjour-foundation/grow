@@ -1,20 +1,41 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {catchError, from, Observable, of, ReplaySubject, switchMap, tap, throwError} from 'rxjs';
+import {
+  catchError,
+  from,
+  Observable,
+  of,
+  ReplaySubject,
+  switchMap,
+  tap,
+  throwError,
+} from 'rxjs';
 
-import {del, get, set} from 'idb-keyval';
+import { del, get, set } from 'idb-keyval';
 
-import {addDays} from 'date-fns';
+import { addDays } from 'date-fns';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GoalsService {
   private goalSubject: ReplaySubject<Goal | undefined> = new ReplaySubject(1);
-  readonly goal$: Observable<Goal | undefined> = this.goalSubject.asObservable();
+  readonly goal$: Observable<Goal | undefined> =
+    this.goalSubject.asObservable();
 
   readonly goals$: Observable<Record<string, string[]>> = of({
-    health: ['eat_fit', '8_hours_sleep', '2_liters_water', 'memory_training', 'lose_weight', 'health_check', 'relaxing', 'long_walk', 'deep_breath', 'laugh'],
+    health: [
+      'eat_fit',
+      '8_hours_sleep',
+      '2_liters_water',
+      'memory_training',
+      'lose_weight',
+      'health_check',
+      'relaxing',
+      'long_walk',
+      'deep_breath',
+      'laugh',
+    ],
     social: [
       'help_a_neighbor',
       'visit_a_friend',
@@ -40,8 +61,27 @@ export class GoalsService {
       'game',
       'podcast',
     ],
-    home: ['spring_cleaning', 'vacuum', 'clean_the_windows', 'clean_air', 'clear_things', 'remove_waste', 'conversion', 'flowers', 'change_of_scene'],
-    space: ['explore', 'visit_a_local_shop', 'have_a_coffee', 'visit_tree', 'sit_on_a_bench', 'train', 'not_alone', 'biodiversity'],
+    home: [
+      'spring_cleaning',
+      'vacuum',
+      'clean_the_windows',
+      'clean_air',
+      'clear_things',
+      'remove_waste',
+      'conversion',
+      'flowers',
+      'change_of_scene',
+    ],
+    space: [
+      'explore',
+      'visit_a_local_shop',
+      'have_a_coffee',
+      'visit_tree',
+      'sit_on_a_bench',
+      'train',
+      'not_alone',
+      'biodiversity',
+    ],
     finance: [
       'remove_waste',
       'through_books',
@@ -83,7 +123,7 @@ export class GoalsService {
         this.goalSubject.next(undefined);
         return throwError(err);
       }),
-      switchMap(() => of(void 0))
+      switchMap(() => of(void 0)),
     );
   }
 

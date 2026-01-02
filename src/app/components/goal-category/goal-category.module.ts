@@ -1,14 +1,19 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {IonicModule} from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
-import {GoalCategoryComponent} from './goal-category.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { GoalCategoryComponent } from './goal-category.component';
 
 @NgModule({
-  imports: [IonicModule, CommonModule, TranslateModule.forChild(), RouterModule],
+  imports: [
+    IonicModule,
+    CommonModule,
+    TranslateModule.forChild(),
+    RouterModule,
+  ],
   declarations: [GoalCategoryComponent],
   exports: [GoalCategoryComponent],
 })
